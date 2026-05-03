@@ -1,65 +1,126 @@
+import TreatmentCard from "@/components/treatments/TreatmentCard";
+import { treatments } from "@/data/treatments";
 import Image from "next/image";
+import CTAButton from "@/components/ui/CTAButton";
+import FadeIn from "@/components/ui/FadeIn";
+import { siteConfig } from "@/config/site";
 
 export default function Home() {
-  return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
-  );
+    const featuredTreatments = treatments.slice(0, 3);
+
+    return (
+        <main>
+            <section className="relative flex h-[90vh] items-center justify-center overflow-hidden">
+                <Image
+                    src="/hero.jpg"
+                    alt="MedSpa"
+                    fill
+                    priority
+                    className="object-cover scale-105"
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/35 to-black/60 backdrop-blur-[1px]" />
+
+                <FadeIn className="relative z-10 max-w-3xl px-6 text-center text-white">
+                    <p className="mb-4 text-sm uppercase tracking-[0.4em] text-rose-200">
+                        Luxury Aesthetic Clinic
+                    </p>
+
+                    <h1 className="font-serif text-5xl leading-tight md:text-7xl">
+                        Timeless Beauty,
+                        <br />
+                        Modern Techniques
+                    </h1>
+
+                    <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+                        <CTAButton href={siteConfig.bookingUrl} variant="light" external>
+                            Book Appointment
+                        </CTAButton>
+
+                        <CTAButton href="/treatments" variant="outline">
+                            Explore Treatments
+                        </CTAButton>
+                    </div>
+                </FadeIn>
+            </section>
+
+            <section className="luxury-glow mx-auto max-w-7xl px-6 py-20">
+                <FadeIn>
+                    <div className="mb-10 text-center">
+                        <p className="text-sm font-medium uppercase tracking-[0.3em] text-rose-500">
+                            Services
+                        </p>
+
+                        <h2 className="mt-3 font-serif text-3xl font-semibold text-stone-900 md:text-4xl">
+                            Popular Treatments
+                        </h2>
+                    </div>
+                </FadeIn>
+
+                <div className="grid gap-8 md:grid-cols-3">
+                    {featuredTreatments.map((treatment, index) => (
+                        <FadeIn key={treatment.slug} delay={index * 0.1}>
+                            <TreatmentCard treatment={treatment} />
+                        </FadeIn>
+                    ))}
+                </div>
+            </section>
+
+            <section className="bg-stone-180 py-20">
+                <div className="mx-auto max-w-6xl px-6 text-center">
+                    <FadeIn>
+                        <div>
+                            <p className="text-sm font-medium uppercase tracking-[0.3em] text-rose-500">
+                                Why Us
+                            </p>
+
+                            <h2 className="mt-3 font-serif text-3xl font-semibold text-stone-900 md:text-4xl">
+                                Personalized Care, Natural Results
+                            </h2>
+                        </div>
+                    </FadeIn>
+
+                    <div className="mt-12 grid gap-8 md:grid-cols-3">
+                        {[
+                            "Certified Specialists",
+                            "Modern Technology",
+                            "Personalized Plans",
+                        ].map((item, index) => (
+                            <FadeIn key={item} delay={index * 0.1}>
+                                <div className="rounded-3xl border border-white/70 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-2xl">
+                                    <h3 className="font-serif text-2xl font-semibold text-stone-900">
+                                        {item}
+                                    </h3>
+
+                                    <p className="mt-3 text-sm leading-6 text-stone-600">
+                                        Every treatment is planned carefully to match your goals,
+                                        comfort, and natural features.
+                                    </p>
+                                </div>
+                            </FadeIn>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            <section className="px-6 py-20 text-center">
+                <FadeIn>
+                    <div>
+                        <h2 className="mt-3 font-serif text-3xl font-semibold text-stone-900 md:text-4xl">
+                            Ready to Start Your Transformation?
+                        </h2>
+
+                        <p className="mx-auto mt-4 max-w-xl text-stone-600">
+                            Book your consultation today and discover the best treatment plan
+                            for you.
+                        </p>
+
+                        <div className="mt-8">
+                            <CTAButton href={siteConfig.bookingUrl} external>Book Now</CTAButton>
+                        </div>
+                    </div>
+                </FadeIn>
+            </section>
+        </main>
+    );
 }
