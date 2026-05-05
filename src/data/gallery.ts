@@ -10,7 +10,7 @@ export const galleryImages: GalleryImage[] = [
         id: 1,
         title: "Facial Treatment Room",
         category: "Clinic",
-        image: "/gallery/gallery-1-1.jpg",
+        image: "/gallery/gallery-1.jpg",
     },
     {
         id: 2,
@@ -40,6 +40,6 @@ export const galleryImages: GalleryImage[] = [
         id: 6,
         title: "Luxury Interior",
         category: "Clinic",
-        image: "/gallery/gallery-1.jpg",
+        image: "/gallery/gallery-6.jpg",
     },
 ];

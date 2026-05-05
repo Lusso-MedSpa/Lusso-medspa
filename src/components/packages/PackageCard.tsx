@@ -1,6 +1,11 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import type { SpaPackage } from "@/data/packages";
+
+const MotionLink = motion.create(Link);
 
 type Props = {
     item: SpaPackage;
@@ -8,13 +13,16 @@ type Props = {
 
 export default function PackageCard({ item }: Props) {
     return (
-        <Link
+        <MotionLink
             href={`/packages/${item.slug}`}
-            className="group relative overflow-hidden rounded-3xl border border-stone-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-2xl"
+            whileHover={{ y: -8, scale: 1.015 }}
+            whileTap={{ scale: 0.98 }}
+            transition={{ type: "spring", stiffness: 260, damping: 20 }}
+            className="group relative overflow-hidden rounded-3xl border border-stone-200 bg-white shadow-sm"
         >
-            {/* glow effect */}
-            <div className="pointer-events-none absolute inset-0 opacity-0 transition duration-500 group-hover:opacity-100">
-                <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-rose-200/40 blur-3xl" />
+            <div className="pointer-events-none absolute inset-0 z-10 opacity-0 transition duration-500 group-hover:opacity-100">
+                <div className="absolute -right-12 -top-12 h-48 w-48 rounded-full bg-rose-200/40 blur-3xl" />
+                <div className="absolute -bottom-12 -left-12 h-48 w-48 rounded-full bg-stone-200/70 blur-3xl" />
             </div>
 
             <div className="relative h-64 overflow-hidden bg-stone-200">
@@ -26,8 +34,7 @@ export default function PackageCard({ item }: Props) {
                     className="object-cover transition duration-700 group-hover:scale-110 group-hover:brightness-105"
                 />
 
-                {/* gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 transition duration-500 group-hover:opacity-100" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent opacity-0 transition duration-500 group-hover:opacity-100" />
 
                 {item.status === "coming-soon" && (
                     <span className="absolute right-4 top-4 rounded-full bg-white/90 px-4 py-2 text-xs font-medium text-stone-900 shadow-sm backdrop-blur">
@@ -36,7 +43,7 @@ export default function PackageCard({ item }: Props) {
                 )}
             </div>
 
-            <div className="relative p-6">
+            <div className="relative z-20 p-6">
                 <p className="text-xs font-medium uppercase tracking-[0.25em] text-rose-500">
                     {item.category}
                 </p>
@@ -49,16 +56,16 @@ export default function PackageCard({ item }: Props) {
                     {item.description}
                 </p>
 
-                <div className="mt-5 flex items-center justify-between">
+                <div className="mt-5 flex items-center justify-between gap-4">
           <span className="text-sm text-stone-500">
-            {item.sessions} · {item.price}
+            {item.sessions}
           </span>
 
-                    <span className="text-sm font-medium text-stone-900 transition group-hover:text-rose-500">
+                    <span className="text-sm font-medium text-stone-900 transition group-hover:translate-x-1 group-hover:text-rose-500">
             View Package →
           </span>
                 </div>
             </div>
-        </Link>
+        </MotionLink>
     );
 }

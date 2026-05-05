@@ -48,7 +48,7 @@ export default async function TreatmentDetailPage({ params }: Props) {
 
                     <div
                         className="mt-6 w-fit rounded-full border border-stone-200 bg-white px-5 py-2 text-sm font-medium text-stone-700 shadow-sm">
-                        {treatment.duration} · {treatment.price}
+                        {treatment.duration}
                     </div>
 
                     <div className="mt-8">

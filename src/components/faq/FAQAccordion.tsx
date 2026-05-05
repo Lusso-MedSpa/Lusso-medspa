@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { faqGroups } from "@/data/faqs";
+import { AnimatePresence, motion } from "framer-motion";
 
 export default function FAQAccordion() {
     const [openItem, setOpenItem] = useState<string | null>(null);
@@ -39,11 +40,21 @@ export default function FAQAccordion() {
                       </span>
                                         </button>
 
-                                        {isOpen && (
-                                            <div className="border-t border-stone-100 px-6 pb-5 pt-1 text-sm leading-7 text-stone-600">
-                                                {item.answer}
-                                            </div>
-                                        )}
+                                        <AnimatePresence initial={false}>
+                                            {isOpen && (
+                                                <motion.div
+                                                    initial={{ height: 0, opacity: 0 }}
+                                                    animate={{ height: "auto", opacity: 1 }}
+                                                    exit={{ height: 0, opacity: 0 }}
+                                                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                                                    className="overflow-hidden"
+                                                >
+                                                    <div className="border-t border-stone-100 px-6 pb-5 pt-4 text-sm leading-7 text-stone-600">
+                                                        {item.answer}
+                                                    </div>
+                                                </motion.div>
+                                            )}
+                                        </AnimatePresence>
                                     </div>
                                 );
                             })}

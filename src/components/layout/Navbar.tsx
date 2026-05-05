@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { siteConfig } from "@/config/site";
+import { AnimatePresence, motion } from "framer-motion";
 
 const navLinks = [
     { label: "Home", href: "/" },
@@ -89,38 +90,44 @@ export default function Navbar() {
                 </button>
             </div>
 
-            <div
-                className={`overflow-hidden border-t border-stone-200 bg-white transition-all duration-300 md:hidden ${
-                    isOpen ? "max-h-[560px] opacity-100" : "max-h-0 opacity-0"
-                }`}
-            >
-                <nav className="flex flex-col gap-2 px-6 py-5 text-sm font-medium text-stone-700">
-                    {navLinks.map((link) => (
-                        <Link
-                            key={link.href}
-                            href={link.href}
-                            onClick={() => setIsOpen(false)}
-                            className={`rounded-2xl px-4 py-3 transition ${
-                                isActive(link.href)
-                                    ? "bg-rose-50 text-rose-500"
-                                    : "hover:bg-stone-100 hover:text-rose-500"
-                            }`}
-                        >
-                            {link.label}
-                        </Link>
-                    ))}
-
-                    <Link
-                        href={siteConfig.bookingUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        onClick={() => setIsOpen(false)}
-                        className="mt-3 rounded-full bg-stone-900 px-5 py-3 text-center text-white shadow-sm transition hover:bg-rose-500"
+            <AnimatePresence>
+                {isOpen && (
+                    <motion.div
+                        initial={{ opacity: 0, y: -12 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -12 }}
+                        transition={{ duration: 0.25 }}
+                        className="border-t border-stone-200 bg-white md:hidden"
                     >
-                        Book Now
-                    </Link>
-                </nav>
-            </div>
+                        <nav className="flex flex-col gap-2 px-6 py-5 text-sm font-medium text-stone-700">
+                            {navLinks.map((link) => (
+                                <Link
+                                    key={link.href}
+                                    href={link.href}
+                                    onClick={() => setIsOpen(false)}
+                                    className={`rounded-2xl px-4 py-3 transition ${
+                                        isActive(link.href)
+                                            ? "bg-rose-50 text-rose-500"
+                                            : "hover:bg-stone-100 hover:text-rose-500"
+                                    }`}
+                                >
+                                    {link.label}
+                                </Link>
+                            ))}
+
+                            <Link
+                                href={siteConfig.bookingUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                onClick={() => setIsOpen(false)}
+                                className="mt-3 rounded-full bg-stone-900 px-5 py-3 text-center text-white shadow-sm transition hover:bg-rose-500"
+                            >
+                                Book Now
+                            </Link>
+                        </nav>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </header>
     );
 }

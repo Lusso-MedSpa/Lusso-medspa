@@ -4,7 +4,6 @@ export type Treatment = {
     category: string;
     description: string;
     duration: string;
-    price: string;
     image: string;
     benefits: string[];
 };
@@ -26,7 +25,6 @@ export const treatments: Treatment[] = [
         description:
             "A personalized facial treatment designed to hydrate, refresh, and improve overall skin texture.",
         duration: "60 min",
-        price: "$120",
         image: "/treatments/facial.jpg",
         benefits: ["Hydrated skin", "Improved glow", "Smoother texture"],
     },
@@ -37,7 +35,6 @@ export const treatments: Treatment[] = [
         description:
             "A resurfacing treatment that helps improve dullness, uneven tone, and visible skin texture.",
         duration: "45 min",
-        price: "$120",
         image: "/treatments/peel.jpg",
         benefits: ["Brighter skin", "Improved tone", "Refined texture"],
     },
@@ -48,7 +45,6 @@ export const treatments: Treatment[] = [
         description:
             "Non-invasive body contouring focused on shaping and toning targeted areas.",
         duration: "45 min",
-        price: "$120",
         image: "/treatments/body.jpg",
         benefits: ["Body contouring", "Targeted shaping", "No surgery"],
     },
@@ -59,7 +55,6 @@ export const treatments: Treatment[] = [
         description:
             "Advanced laser treatment for skin clarity, tone improvement, and rejuvenation.",
         duration: "30 min",
-        price: "$120",
         image: "/treatments/laser.jpg",
         benefits: ["Even skin tone", "Skin clarity", "Modern technology"],
     },
@@ -70,7 +65,6 @@ export const treatments: Treatment[] = [
         description:
             "Aesthetic injectable treatment designed to soften the appearance of expression lines.",
         duration: "30 min",
-        price: "$120",
         image: "/treatments/botox.jpg",
         benefits: ["Softer lines", "Natural look", "Quick appointment"],
     },
@@ -81,7 +75,6 @@ export const treatments: Treatment[] = [
         description:
             "Wellness-focused treatment designed to support hydration and overall vitality.",
         duration: "45 min",
-        price: "$120",
         image: "/treatments/iv.jpg",
         benefits: ["Hydration support", "Energy support", "Wellness boost"],
     },

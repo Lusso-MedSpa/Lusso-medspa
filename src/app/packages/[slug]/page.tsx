@@ -58,7 +58,7 @@ export default async function PackageDetailPage({ params }: Props) {
                     </p>
 
                     <div className="mt-6 w-fit rounded-full border border-stone-200 bg-white px-5 py-2 text-sm font-medium text-stone-700 shadow-sm">
-                        Sessions: {item.sessions} . {item.price}
+                        Sessions: {item.sessions}
                     </div>
 
                     <div className="mt-8 rounded-3xl border border-stone-200 bg-white p-6 shadow-sm">

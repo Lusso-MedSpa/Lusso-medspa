@@ -1,13 +1,10 @@
+"use client";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
 import { galleryImages } from "@/data/gallery";
 import PageHeader from "@/components/ui/PageHeader";
 import FadeIn from "@/components/ui/FadeIn";
-
-export const metadata = {
-    title: "Gallery | MedSpa Masoud",
-    description:
-        "Explore MedSpa Masoud treatment spaces, aesthetic results, and luxury clinic details.",
-};
 
 export default function GalleryPage() {
     return (
@@ -22,11 +19,14 @@ export default function GalleryPage() {
                 <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                     {galleryImages.map((item, index) => (
                         <FadeIn key={item.id} delay={index * 0.05}>
-                            <div className="group relative overflow-hidden rounded-3xl border border-stone-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-2xl">
-
-                                {/* glow */}
-                                <div className="pointer-events-none absolute inset-0 opacity-0 transition duration-500 group-hover:opacity-100">
-                                    <div className="absolute -bottom-10 -left-10 h-40 w-40 rounded-full bg-rose-200/40 blur-3xl" />
+                            <motion.div
+                                whileHover={{ y: -8, scale: 1.015 }}
+                                transition={{ type: "spring", stiffness: 260, damping: 20 }}
+                                className="group relative overflow-hidden rounded-3xl border border-stone-200 bg-white shadow-sm"
+                            >
+                                <div className="pointer-events-none absolute inset-0 z-10 opacity-0 transition duration-500 group-hover:opacity-100">
+                                    <div className="absolute -bottom-12 -left-12 h-48 w-48 rounded-full bg-rose-200/40 blur-3xl" />
+                                    <div className="absolute -top-12 -right-12 h-48 w-48 rounded-full bg-stone-200/70 blur-3xl" />
                                 </div>
 
                                 <div className="relative h-80 overflow-hidden bg-stone-200">
@@ -38,11 +38,10 @@ export default function GalleryPage() {
                                         className="object-cover transition duration-700 group-hover:scale-110 group-hover:brightness-105"
                                     />
 
-                                    {/* overlay */}
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 transition duration-500 group-hover:opacity-100" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent opacity-0 transition duration-500 group-hover:opacity-100" />
                                 </div>
 
-                                <div className="relative p-5">
+                                <div className="relative z-20 p-5">
                                     <p className="text-xs font-medium uppercase tracking-[0.25em] text-rose-500">
                                         {item.category}
                                     </p>
@@ -51,7 +50,7 @@ export default function GalleryPage() {
                                         {item.title}
                                     </h2>
                                 </div>
-                            </div>
+                            </motion.div>
                         </FadeIn>
                     ))}
                 </div>
