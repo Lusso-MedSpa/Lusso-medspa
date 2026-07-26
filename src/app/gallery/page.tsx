@@ -37,7 +37,7 @@ export default function GalleryPage() {
                                         sizes="(max-width: 768px) 100vw, 33vw"
                                         className="object-cover transition duration-700 group-hover:scale-110 group-hover:brightness-105"
                                     />
-
+                                    git commit --amend --reset-author
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent opacity-0 transition duration-500 group-hover:opacity-100" />
                                 </div>
 

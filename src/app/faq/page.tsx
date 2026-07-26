@@ -2,7 +2,7 @@ import FAQAccordion from "@/components/faq/FAQAccordion";
 import PageHeader from "@/components/ui/PageHeader";
 
 export const metadata = {
-    title: "FAQ | MedSpa Masoud",
+    title: "FAQ | Lusso",
     description: "Frequently asked questions about medspa treatments, booking, and safety.",
 };
 

@@ -2,8 +2,8 @@ import PageHeader from "@/components/ui/PageHeader";
 import { siteConfig } from "@/config/site";
 
 export const metadata = {
-    title: "Terms | MedSpa Masoud",
-    description: "Terms and conditions for MedSpa Masoud.",
+    title: "Terms | Lusso",
+    description: "Terms and conditions for Lussonpm run.",
 };
 
 export default function TermsPage() {

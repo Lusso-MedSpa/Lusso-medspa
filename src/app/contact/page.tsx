@@ -2,8 +2,8 @@ import PageHeader from "@/components/ui/PageHeader";
 import { siteConfig } from "@/config/site";
 
 export const metadata = {
-    title: "Contact | MedSpa Masoud",
-    description: "Contact MedSpa Masoud to book a consultation or ask about treatments.",
+    title: "Contact | Lusso",
+    description: "Contact Lusso to book a consultation or ask about treatments.",
 };
 
 export default function ContactPage() {
@@ -73,15 +73,15 @@ export default function ContactPage() {
                         <div className="mt-6 space-y-4 text-stone-600">
                             <p>
                                 <span className="font-medium text-stone-900">Address:</span>{" "}
-                                California, USA
+                                Roseville, CA 95661
                             </p>
                             <p>
                                 <span className="font-medium text-stone-900">Phone:</span>{" "}
-                                +916 000 0000
+                                916-664-4490
                             </p>
                             <p>
                                 <span className="font-medium text-stone-900">Email:</span>{" "}
-                                info@medspamasoud.com
+                                concierge@lussomedspa.org
                             </p>
                             <p>
                                 <span className="font-medium text-stone-900">Hours:</span>{" "}
@@ -100,7 +100,7 @@ export default function ContactPage() {
 
                     <div className="overflow-hidden rounded-3xl border border-stone-200 bg-stone-200 shadow-sm">
                         <iframe
-                            title="MedSpa location map"
+                            title="Lusso location map"
                             src="https://www.google.com/maps?q=California,USA&output=embed"
                             className="h-[360px] w-full border-0"
                             loading="lazy"

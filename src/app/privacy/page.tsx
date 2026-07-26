@@ -2,8 +2,8 @@ import PageHeader from "@/components/ui/PageHeader";
 import { siteConfig } from "@/config/site";
 
 export const metadata = {
-    title: "Privacy Policy | MedSpa Masoud",
-    description: "Privacy policy for MedSpa Masoud.",
+    title: "Privacy Policy | Lusso",
+    description: "Privacy policy for Lusso.",
 };
 
 export default function PrivacyPage() {

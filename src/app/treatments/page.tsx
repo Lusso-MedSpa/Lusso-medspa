@@ -2,7 +2,7 @@ import TreatmentsGrid from "@/components/treatments/TreatmentsGrid";
 import PageHeader from "@/components/ui/PageHeader";
 
 export const metadata = {
-    title: "Treatments | MedSpa Masoud",
+    title: "Treatments | Lusso",
     description: "Explore aesthetic, skin, body, laser, injectable, and wellness treatments.",
 };
 

@@ -49,7 +49,7 @@ export default function Navbar() {
                     onClick={() => setIsOpen(false)}
                     className="font-serif text-2xl font-semibold tracking-wide text-stone-900 transition hover:text-rose-500"
                 >
-                    MedSpa Masoud
+                    Lusso
                 </Link>
 
                 <nav className="hidden items-center gap-7 text-sm font-medium text-stone-700 md:flex">

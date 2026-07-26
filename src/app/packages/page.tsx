@@ -4,7 +4,7 @@ import PageHeader from "@/components/ui/PageHeader";
 import FadeIn from "@/components/ui/FadeIn";
 
 export const metadata = {
-    title: "Packages | MedSpa Masoud",
+    title: "Packages | Lusso",
     description: "Explore luxury medspa packages for skin, body, and wellness.",
 };
 

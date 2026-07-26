@@ -5,7 +5,7 @@ export default function Footer() {
         <footer className="border-t border-stone-200 bg-gradient-to-b from-rose-50 to-stone-100 text-stone-900">
             <div className="mx-auto grid max-w-7xl gap-10 px-6 py-12 md:grid-cols-4">
                 <div>
-                    <h3 className="text-xl font-semibold">MedSpa Masoud</h3>
+                    <h3 className="text-xl font-semibold">Lusso</h3>
                     <p className="mt-4 text-sm leading-6 text-stone-900">
                         Luxury aesthetic treatments designed to help you feel confident,
                         refreshed, and naturally radiant.
@@ -35,15 +35,16 @@ export default function Footer() {
                 <div>
                     <h4 className="font-semibold">Contact</h4>
                     <div className="mt-4 space-y-2 text-sm text-stone-900">
-                        <p>Address</p>
-                        <p>+916000000</p>
-                        <p>info@medspamasoud.com</p>
+                        <p>1411 Secret Ravine Pkwy, Suite 180
+                            Roseville, CA 95661</p>
+                        <p>916-664-4490</p>
+                        <p>concierge@lussomedspa.org</p>
                     </div>
                 </div>
             </div>
 
             <div className="border-t border-stone-800 px-6 py-5 text-center text-xs text-stone-800">
-                © {new Date().getFullYear()} MedSpa Masoud. All rights reserved.
+                © {new Date().getFullYear()}  Lusso MedSpa. All rights reserved.
             </div>
         </footer>
     );

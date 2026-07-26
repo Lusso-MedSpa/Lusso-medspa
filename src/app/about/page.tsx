@@ -2,8 +2,8 @@ import Image from "next/image";
 import PageHeader from "@/components/ui/PageHeader";
 
 export const metadata = {
-    title: "About | MedSpa Masoud",
-    description: "Learn more about MedSpa Masoud, our philosophy, and our approach to aesthetic care.",
+    title: "About | Lusso",
+    description: "Learn more about Lusso, our philosophy, and our approach to aesthetic care.",
 };
 
 export default function AboutPage() {

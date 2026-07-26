@@ -13,7 +13,7 @@ export default function Home() {
             <section className="relative flex h-[90vh] items-center justify-center overflow-hidden">
                 <Image
                     src="/hero.jpg"
-                    alt="MedSpa"
+                    alt="Lusso"
                     fill
                     priority
                     className="object-cover scale-105"
