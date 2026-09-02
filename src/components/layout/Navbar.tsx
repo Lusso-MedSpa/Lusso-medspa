@@ -1,133 +1,41 @@
 "use client";
-
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { siteConfig } from "@/config/site";
-import { AnimatePresence, motion } from "framer-motion";
+import { treatmentCategories, treatments } from "@/data/treatments";
 
-const navLinks = [
-    { label: "Home", href: "/" },
-    { label: "Treatments", href: "/treatments" },
-    { label: "Packages", href: "/packages" },
-    { label: "About", href: "/about" },
-    { label: "Gallery", href: "/gallery" },
-    { label: "FAQ", href: "/faq" },
-    { label: "Contact", href: "/contact" },
-];
-
+const links = [{label:"About",href:"/about"},{label:"Gallery",href:"/gallery"},{label:"FAQ",href:"/faq"},{label:"Contact",href:"/contact"}];
 export default function Navbar() {
-    const [isOpen, setIsOpen] = useState(false);
-    const [isScrolled, setIsScrolled] = useState(false);
-    const pathname = usePathname();
-
-    useEffect(() => {
-        const handleScroll = () => setIsScrolled(window.scrollY > 20);
-
-        handleScroll();
-        window.addEventListener("scroll", handleScroll);
-
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
-
-    const isActive = (href: string) => {
-        if (href === "/") return pathname === "/";
-        return pathname.startsWith(href);
-    };
-
-    return (
-        <header
-            className={`sticky top-0 z-50 border-b transition-all duration-300 ${
-                isScrolled
-                    ? "border-stone-200 bg-white/90 shadow-lg shadow-stone-200/50 backdrop-blur-xl"
-                    : "border-transparent bg-white/80 backdrop-blur-md"
-            }`}
-        >
-            <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-                <Link
-                    href="/"
-                    onClick={() => setIsOpen(false)}
-                    className="lusso-wordmark font-serif text-2xl font-semibold tracking-wide text-stone-900 transition hover:text-rose-500"
-                >
-                    Lusso
-                </Link>
-
-                <nav className="hidden items-center gap-7 text-sm font-medium text-stone-700 md:flex">
-                    {navLinks.map((link) => (
-                        <Link
-                            key={link.href}
-                            href={link.href}
-                            className={`relative transition hover:text-rose-500 ${
-                                isActive(link.href) ? "text-rose-500" : ""
-                            }`}
-                        >
-                            {link.label}
-
-                            {isActive(link.href) && (
-                                <span className="absolute -bottom-2 left-1/2 h-1 w-1 -translate-x-1/2 rounded-full bg-rose-500" />
-                            )}
-                        </Link>
-                    ))}
-                </nav>
-
-                <Link
-                    href={siteConfig.bookingUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hidden rounded-full bg-stone-900 px-5 py-2 text-sm font-medium text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-rose-500 hover:shadow-lg md:inline-flex"
-                >
-                    Book Now
-                </Link>
-
-                <button
-                    type="button"
-                    onClick={() => setIsOpen((prev) => !prev)}
-                    className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-stone-200 bg-white text-xl text-stone-900 shadow-sm transition hover:border-rose-300 hover:text-rose-500 md:hidden"
-                    aria-label="Toggle navigation menu"
-                    aria-expanded={isOpen}
-                >
-                    {isOpen ? "×" : "☰"}
-                </button>
-            </div>
-
-            <AnimatePresence>
-                {isOpen && (
-                    <motion.div
-                        initial={{ opacity: 0, y: -12 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -12 }}
-                        transition={{ duration: 0.25 }}
-                        className="border-t border-stone-200 bg-white md:hidden"
-                    >
-                        <nav className="flex flex-col gap-2 px-6 py-5 text-sm font-medium text-stone-700">
-                            {navLinks.map((link) => (
-                                <Link
-                                    key={link.href}
-                                    href={link.href}
-                                    onClick={() => setIsOpen(false)}
-                                    className={`rounded-2xl px-4 py-3 transition ${
-                                        isActive(link.href)
-                                            ? "bg-rose-50 text-rose-500"
-                                            : "hover:bg-stone-100 hover:text-rose-500"
-                                    }`}
-                                >
-                                    {link.label}
-                                </Link>
-                            ))}
-
-                            <Link
-                                href={siteConfig.bookingUrl}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                onClick={() => setIsOpen(false)}
-                                className="mt-3 rounded-full bg-stone-900 px-5 py-3 text-center text-white shadow-sm transition hover:bg-rose-500"
-                            >
-                                Book Now
-                            </Link>
-                        </nav>
-                    </motion.div>
-                )}
-            </AnimatePresence>
-        </header>
-    );
+ const [mobileOpen,setMobileOpen]=useState(false);
+ const [treatmentsOpen,setTreatmentsOpen]=useState(false);
+ const trigger=useRef<HTMLButtonElement>(null);
+ const pathname=usePathname();
+ const close=()=>{setMobileOpen(false);setTreatmentsOpen(false)};
+ const collections= treatmentCategories.filter(category=>category!=="All");
+ return <header className="lusso-header" onKeyDown={event=>{if(event.key==="Escape"){setTreatmentsOpen(false);setMobileOpen(false);trigger.current?.focus()}}}>
+  <div className="lusso-nav-inner">
+   <Link href="/" onClick={close} className="lusso-wordmark" aria-label="Lusso MedSpa home">Lusso<span>MEDSPA</span></Link>
+   <nav className="lusso-desktop-nav" aria-label="Main navigation">
+    <Link href="/" onClick={close} aria-current={pathname==="/"?"page":undefined}>Home</Link>
+    <div className="lusso-treatment-nav" onMouseEnter={()=>setTreatmentsOpen(true)} onMouseLeave={()=>setTreatmentsOpen(false)} onBlur={event=>{if(!event.currentTarget.contains(event.relatedTarget as Node|null))setTreatmentsOpen(false)}}>
+     <button ref={trigger} type="button" aria-expanded={treatmentsOpen} aria-controls="treatment-mega-menu" onClick={()=>setTreatmentsOpen(value=>!value)}>Treatments <span aria-hidden="true">{treatmentsOpen?"−":"+"}</span></button>
+     {treatmentsOpen && <div id="treatment-mega-menu" className="lusso-mega-menu">
+      <div className="lusso-mega-heading"><div><span className="lusso-menu-eyebrow">THE TREATMENT COLLECTION</span><p>Find the care that speaks to you.</p></div><Link href="/treatments" onClick={close}>Explore all treatments ↗</Link></div>
+      <div className="lusso-mega-grid">{collections.map(category=><section key={category}><h2>{category}</h2><ul>{treatments.filter(item=>item.category===category).map(item=><li key={item.slug}><Link href={`/treatments/${item.slug}`} onClick={close}><strong>{item.title}</strong><span>{item.description.split(". ")[0]}.</span></Link></li>)}</ul></section>)}</div>
+     </div>}
+    </div>
+    {links.map(link=><Link key={link.href} href={link.href} onClick={close} aria-current={pathname.startsWith(link.href)?"page":undefined}>{link.label}</Link>)}
+   </nav>
+   <a className="lusso-header-call" href="tel:+19166644490">{siteConfig.phone}</a>
+   <Link className="lusso-nav-book" href="/contact" onClick={close}>Consultation ↗</Link>
+   <button className="lusso-mobile-toggle" aria-label={mobileOpen?"Close navigation":"Open navigation"} aria-expanded={mobileOpen} aria-controls="mobile-navigation" onClick={()=>setMobileOpen(value=>!value)}>{mobileOpen?"×":"☰"}</button>
+  </div>
+  {mobileOpen && <nav id="mobile-navigation" className="lusso-mobile-nav" aria-label="Mobile navigation">
+    <Link href="/" onClick={close}>Home</Link>
+    <details><summary>Treatments</summary><Link href="/treatments" onClick={close}>Explore all treatments ↗</Link>{collections.map(category=><section key={category}><h2>{category}</h2>{treatments.filter(item=>item.category===category).map(item=><Link key={item.slug} href={`/treatments/${item.slug}`} onClick={close}><strong>{item.title}</strong><span>{item.description.split(". ")[0]}.</span></Link>)}</section>)}</details>
+    {links.map(link=><Link key={link.href} href={link.href} onClick={close}>{link.label}</Link>)}
+    <a href="tel:+19166644490">Call {siteConfig.phone}</a>
+  </nav>}
+ </header>;
 }

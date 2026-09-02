@@ -17,7 +17,6 @@ export default function Footer() {
                     <h4 className="font-semibold">Pages</h4>
                     <div className="mt-4 flex flex-col gap-2 text-sm text-stone-900">
                         <Link href="/treatments">Treatments</Link>
-                        <Link href="/packages">Packages</Link>
                         <Link href="/about">About</Link>
                         <Link href="/gallery">Gallery</Link>
                     </div>
