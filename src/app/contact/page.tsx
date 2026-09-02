@@ -87,14 +87,14 @@ export default function ContactPage() {
                                 <span className="font-medium text-stone-900">Hours:</span>{" "}
                                 Mon - Sat, 9:00 - 18:00
                             </p>
-                            <a
+                            {siteConfig.googleReviewUrl ? <a
                                 href={siteConfig.googleReviewUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="mt-6 inline-flex rounded-full border border-stone-900 px-5 py-3 text-sm font-medium text-stone-900 transition hover:bg-stone-900 hover:text-white"
                             >
                                 Rate us on Google
-                            </a>
+                            </a> : <div className="mt-6"><button type="button" disabled className="rounded border border-stone-200 px-5 py-3 text-stone-500">Google reviews — coming soon</button><p className="mt-2 text-sm">Our direct Google review link will be available here.</p></div>}
                         </div>
                     </div>
 

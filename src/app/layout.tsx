@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import CursorGlow from "@/components/ui/CursorGlow";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { Playfair_Display, Inter, Geist } from "next/font/google";
@@ -26,6 +27,7 @@ export default function RootLayout({
     return (
         <html lang="en" data-scroll-behavior="smooth" className={cn(playfair.variable, "font-sans", geist.variable)}>
         <body className="bg-white text-stone-900 antialiased font-sans">
+        <CursorGlow />
         <Navbar />
         <PageTransition>{children}</PageTransition>
         <Footer />

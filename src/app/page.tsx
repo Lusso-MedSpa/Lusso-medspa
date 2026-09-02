@@ -9,7 +9,7 @@ export default function Home() {
     const featuredTreatments = treatments.slice(0, 3);
 
     return (
-        <main>
+        <main className="lusso-home">
             <section className="lusso-hero">
                 <div className="lusso-hero-copy">
                     <p className="lusso-eyebrow">Lusso Med Spa · Roseville, California</p>
@@ -20,8 +20,8 @@ export default function Home() {
                         <CTAButton href="/treatments">Explore Treatments</CTAButton>
                     </div>
                 </div>
-                <div className="lusso-hero-image">
-                    <Image src="/hero.jpg" alt="Lusso aesthetic care" fill priority sizes="(max-width: 767px) 100vw, 50vw"/>
+                <div className="lusso-hero-image" aria-hidden="true">
+                    <Image src="/hero.jpg" alt="" fill priority sizes="100vw"/>
                 </div>
             </section>
             <div className="lusso-contact-strip">
@@ -52,7 +52,7 @@ export default function Home() {
                 </div>
             </section>
 
-            <section className="bg-stone-180 py-20">
+            <section className="lusso-philosophy py-20">
                 <div className="mx-auto max-w-6xl px-6 text-center">
                     <FadeIn>
                         <div>
@@ -74,6 +74,7 @@ export default function Home() {
                         ].map((item, index) => (
                             <FadeIn key={item} delay={index * 0.1}>
                                 <div className="rounded-3xl border border-white/70 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-2xl">
+                                    <span className="lusso-step-number">{String(index + 1).padStart(2, "0")}</span>
                                     <h3 className="font-serif text-2xl font-semibold text-stone-900">
                                         {item}
                                     </h3>
@@ -89,7 +90,7 @@ export default function Home() {
                 </div>
             </section>
 
-            <section className="px-6 py-20 text-center">
+            <section className="lusso-invitation px-6 py-20 text-center">
                 <FadeIn>
                     <div>
                         <h2 className="mt-3 font-serif text-3xl font-semibold text-stone-900 md:text-4xl">

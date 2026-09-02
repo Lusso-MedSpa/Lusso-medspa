@@ -19,7 +19,7 @@ export default function Navbar() {
    <nav className="lusso-desktop-nav" aria-label="Main navigation">
     <Link href="/" onClick={close} aria-current={pathname==="/"?"page":undefined}>Home</Link>
     <div className="lusso-treatment-nav" onMouseEnter={()=>setTreatmentsOpen(true)} onMouseLeave={()=>setTreatmentsOpen(false)} onBlur={event=>{if(!event.currentTarget.contains(event.relatedTarget as Node|null))setTreatmentsOpen(false)}}>
-     <button ref={trigger} type="button" aria-expanded={treatmentsOpen} aria-controls="treatment-mega-menu" onClick={()=>setTreatmentsOpen(value=>!value)}>Treatments <span aria-hidden="true">{treatmentsOpen?"−":"+"}</span></button>
+     <button ref={trigger} type="button" aria-expanded={treatmentsOpen} aria-controls="treatment-mega-menu" onClick={()=>setTreatmentsOpen(value=>!value)}>Treatments</button>
      {treatmentsOpen && <div id="treatment-mega-menu" className="lusso-mega-menu">
       <div className="lusso-mega-heading"><div><span className="lusso-menu-eyebrow">THE TREATMENT COLLECTION</span><p>Find the care that speaks to you.</p></div><Link href="/treatments" onClick={close}>Explore all treatments ↗</Link></div>
       <div className="lusso-mega-grid">{collections.map(category=><section key={category}><h2>{category}</h2><ul>{treatments.filter(item=>item.category===category).map(item=><li key={item.slug}><Link href={`/treatments/${item.slug}`} onClick={close}><strong>{item.title}</strong><span>{item.description.split(". ")[0]}.</span></Link></li>)}</ul></section>)}</div>
@@ -27,7 +27,6 @@ export default function Navbar() {
     </div>
     {links.map(link=><Link key={link.href} href={link.href} onClick={close} aria-current={pathname.startsWith(link.href)?"page":undefined}>{link.label}</Link>)}
    </nav>
-   <a className="lusso-header-call" href="tel:+19166644490">{siteConfig.phone}</a>
    <Link className="lusso-nav-book" href="/contact" onClick={close}>Consultation ↗</Link>
    <button className="lusso-mobile-toggle" aria-label={mobileOpen?"Close navigation":"Open navigation"} aria-expanded={mobileOpen} aria-controls="mobile-navigation" onClick={()=>setMobileOpen(value=>!value)}>{mobileOpen?"×":"☰"}</button>
   </div>
