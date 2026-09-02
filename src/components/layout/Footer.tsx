@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { siteConfig } from "@/config/site";
 
 export default function Footer() {
     return (
@@ -35,10 +36,9 @@ export default function Footer() {
                 <div>
                     <h4 className="font-semibold">Contact</h4>
                     <div className="mt-4 space-y-2 text-sm text-stone-900">
-                        <p>1411 Secret Ravine Pkwy, Suite 180
-                            Roseville, CA 95661</p>
-                        <p>916-664-4490</p>
-                        <p>concierge@lussomedspa.org</p>
+                        <p className="whitespace-pre-line">Address: {siteConfig.address}</p>
+                        <p><a href="tel:+19166644490">{siteConfig.phone}</a></p>
+                        <p><a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a></p>
                     </div>
                 </div>
             </div>

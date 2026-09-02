@@ -3,7 +3,7 @@ import PageHeader from "@/components/ui/PageHeader";
 
 export const metadata = {
     title: "Treatments | Lusso",
-    description: "Explore aesthetic, skin, body, laser, injectable, and wellness treatments.",
+    description: "Explore injectables, PRP / PRF, skin rejuvenation and laser treatments in Roseville.",
 };
 
 export default function TreatmentsPage() {
@@ -12,7 +12,7 @@ export default function TreatmentsPage() {
             <PageHeader
                 label="Our Services"
                 title="Treatments"
-                description="Explore our aesthetic and wellness treatments designed to help you look refreshed, confident, and naturally radiant."
+                description="Explore four treatment collections. Your consultation helps determine what is appropriate for your skin, features and goals."
             />
 
             <TreatmentsGrid />

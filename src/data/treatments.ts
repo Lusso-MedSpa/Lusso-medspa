@@ -1,81 +1,193 @@
 export type Treatment = {
-    slug: string;
-    title: string;
-    category: string;
-    description: string;
-    duration: string;
-    image: string;
-    benefits: string[];
+ slug: string;
+ title: string;
+ category: string;
+ description: string;
+ image: string;
+ benefits: string[];
 };
-
 export const treatmentCategories = [
-    "All",
-    "Skin & Face",
-    "Body",
-    "Laser",
-    "Injectables",
-    "Wellness",
+  "All",
+  "Injectables & Regenerative Treatments",
+  "PRP / PRF Treatments",
+  "Skin Rejuvenation",
+  "Laser Treatments"
 ];
-
 export const treatments: Treatment[] = [
-    {
-        slug: "facial-rejuvenation",
-        title: "Facial Rejuvenation",
-        category: "Skin & Face",
-        description:
-            "A personalized facial treatment designed to hydrate, refresh, and improve overall skin texture.",
-        duration: "60 min",
-        image: "/treatments/facial.jpg",
-        benefits: ["Hydrated skin", "Improved glow", "Smoother texture"],
-    },
-    {
-        slug: "chemical-peel",
-        title: "Chemical Peel",
-        category: "Skin & Face",
-        description:
-            "A resurfacing treatment that helps improve dullness, uneven tone, and visible skin texture.",
-        duration: "45 min",
-        image: "/treatments/peel.jpg",
-        benefits: ["Brighter skin", "Improved tone", "Refined texture"],
-    },
-    {
-        slug: "body-sculpting",
-        title: "Body Sculpting",
-        category: "Body",
-        description:
-            "Non-invasive body contouring focused on shaping and toning targeted areas.",
-        duration: "45 min",
-        image: "/treatments/body.jpg",
-        benefits: ["Body contouring", "Targeted shaping", "No surgery"],
-    },
-    {
-        slug: "laser-therapy",
-        title: "Laser Therapy",
-        category: "Laser",
-        description:
-            "Advanced laser treatment for skin clarity, tone improvement, and rejuvenation.",
-        duration: "30 min",
-        image: "/treatments/laser.jpg",
-        benefits: ["Even skin tone", "Skin clarity", "Modern technology"],
-    },
-    {
-        slug: "botox-treatment",
-        title: "Botox Treatment",
-        category: "Injectables",
-        description:
-            "Aesthetic injectable treatment designed to soften the appearance of expression lines.",
-        duration: "30 min",
-        image: "/treatments/botox.jpg",
-        benefits: ["Softer lines", "Natural look", "Quick appointment"],
-    },
-    {
-        slug: "iv-therapy",
-        title: "IV Therapy",
-        category: "Wellness",
-        description:
-            "Wellness-focused treatment designed to support hydration and overall vitality.",
-        duration: "45 min",
-        image: "/treatments/iv.jpg",
-        benefits: ["Hydration support", "Energy support", "Wellness boost"],
-    },
+  {
+    "slug": "botox-treatment",
+    "title": "Botox® / Dysport®",
+    "category": "Injectables & Regenerative Treatments",
+    "description": "Prescription injectables that temporarily soften expression lines by relaxing selected facial muscles. Your clinician will assess suitability and discuss risks and expected results.",
+    "image": "/treatments/botox.jpg",
+    "benefits": [
+      "Expression lines",
+      "Individualized assessment"
+    ]
+  },
+  {
+    "slug": "dermal-fillers",
+    "title": "Dermal Fillers (Hyaluronic Acid)",
+    "category": "Injectables & Regenerative Treatments",
+    "description": "Hyaluronic acid fillers can restore volume and enhance facial contours. Product selection and placement are tailored to your anatomy and goals.",
+    "image": "/treatments/botox.jpg",
+    "benefits": [
+      "Facial volume",
+      "Balanced contours"
+    ]
+  },
+  {
+    "slug": "skinvive",
+    "title": "Skinvive™",
+    "category": "Injectables & Regenerative Treatments",
+    "description": "An injectable hyaluronic acid treatment used to improve cheek skin smoothness. A consultation determines whether it is appropriate for your skin.",
+    "image": "/treatments/facial.jpg",
+    "benefits": [
+      "Cheek smoothness",
+      "Skin quality"
+    ]
+  },
+  {
+    "slug": "redensity",
+    "title": "Redensity",
+    "category": "Injectables & Regenerative Treatments",
+    "description": "Discuss hyaluronic acid treatment options with your clinician. The specific product, intended use and suitability will be confirmed before treatment.",
+    "image": "/treatments/facial.jpg",
+    "benefits": [
+      "Product consultation",
+      "Personalized planning"
+    ]
+  },
+  {
+    "slug": "biostimulators",
+    "title": "Biostimulators (Sculptra®, Radiesse®, and More)",
+    "category": "Injectables & Regenerative Treatments",
+    "description": "Explore collagen-stimulating injectable options for selected volume and skin-quality concerns. Results develop differently depending on the product and treatment plan.",
+    "image": "/treatments/botox.jpg",
+    "benefits": [
+      "Volume concerns",
+      "Collagen-focused options"
+    ]
+  },
+  {
+    "slug": "hair-prf",
+    "title": "Hair PRF",
+    "category": "PRP / PRF Treatments",
+    "description": "Platelet-rich fibrin prepared from your own blood may be considered for selected hair concerns. Evidence and results vary; an assessment helps identify the underlying cause.",
+    "image": "/treatments/facial.jpg",
+    "benefits": [
+      "Hair assessment",
+      "Treatment suitability"
+    ]
+  },
+  {
+    "slug": "under-eye-prf",
+    "title": "Under-Eye PRF",
+    "category": "PRP / PRF Treatments",
+    "description": "A clinician-led discussion of platelet-rich fibrin for under-eye concerns. Suitability, limitations and potential risks are reviewed before a personalized plan.",
+    "image": "/treatments/facial.jpg",
+    "benefits": [
+      "Under-eye concerns",
+      "Individual assessment"
+    ]
+  },
+  {
+    "slug": "full-face-prf",
+    "title": "Full Face PRF",
+    "category": "PRP / PRF Treatments",
+    "description": "Platelet-rich fibrin may be used within an individualized facial treatment plan. Your clinician will explain the evidence, potential benefits and risks.",
+    "image": "/treatments/facial.jpg",
+    "benefits": [
+      "Skin-quality concerns",
+      "Individualized care"
+    ]
+  },
+  {
+    "slug": "vampire-facial",
+    "title": "Vampire Facial® (PRP/PRF Microneedling)",
+    "category": "PRP / PRF Treatments",
+    "description": "Discuss microneedling with platelet-based preparations for skin texture and scar concerns. Evidence, device compatibility and suitability require clinical review.",
+    "image": "/treatments/facial.jpg",
+    "benefits": [
+      "Texture concerns",
+      "Scar assessment"
+    ]
+  },
+  {
+    "slug": "microneedling-prf",
+    "title": "Microneedling with PRF",
+    "category": "PRP / PRF Treatments",
+    "description": "A consultation-led approach to microneedling and platelet-rich fibrin. Your provider will explain the proposed method, aftercare and realistic expectations.",
+    "image": "/treatments/facial.jpg",
+    "benefits": [
+      "Skin texture",
+      "Aftercare planning"
+    ]
+  },
+  {
+    "slug": "microneedling-ha",
+    "title": "Microneedling with Hyaluronic Acid (HA)",
+    "category": "PRP / PRF Treatments",
+    "description": "Explore microneedling and hydration-focused skin care. Your clinician will confirm suitable products and explain the risks and limitations of the proposed combination.",
+    "image": "/treatments/facial.jpg",
+    "benefits": [
+      "Texture assessment",
+      "Hydration-focused care"
+    ]
+  },
+  {
+    "slug": "exosome-therapy",
+    "title": "Exosome Therapy",
+    "category": "Skin Rejuvenation",
+    "description": "There are currently no FDA-approved exosome products. This topic requires medical and regulatory review and is not available for routine booking through this website.",
+    "image": "/treatments/facial.jpg",
+    "benefits": [
+      "Clinical evidence review",
+      "Regulatory safety discussion"
+    ]
+  },
+  {
+    "slug": "pdo-thread-lift",
+    "title": "PDO Thread Lift",
+    "category": "Skin Rejuvenation",
+    "description": "A minimally invasive option for selected facial laxity concerns. A clinician will discuss suitability, potential complications and realistic lifting expectations.",
+    "image": "/treatments/facial.jpg",
+    "benefits": [
+      "Facial laxity",
+      "Treatment consultation"
+    ]
+  },
+  {
+    "slug": "laser-hair-removal",
+    "title": "Laser Hair Removal",
+    "category": "Laser Treatments",
+    "description": "Laser treatment can reduce unwanted hair over a course of sessions. Suitability and outcomes depend on skin tone, hair characteristics and the device used.",
+    "image": "/treatments/laser.jpg",
+    "benefits": [
+      "Unwanted hair",
+      "Personalized laser assessment"
+    ]
+  },
+  {
+    "slug": "ipl-photofacial",
+    "title": "IPL Photofacial",
+    "category": "Laser Treatments",
+    "description": "Intense pulsed light may help address selected pigmentation and redness concerns. Your provider will assess skin type and suitability before treatment.",
+    "image": "/treatments/laser.jpg",
+    "benefits": [
+      "Pigmentation concerns",
+      "Redness assessment"
+    ]
+  },
+  {
+    "slug": "co2-fractional-laser",
+    "title": "CO2 Fractional Laser",
+    "category": "Laser Treatments",
+    "description": "Fractional resurfacing may improve selected texture, wrinkle and acne-scar concerns. Consultation covers candidacy, risks and the care needed during recovery.",
+    "image": "/treatments/laser.jpg",
+    "benefits": [
+      "Skin texture",
+      "Acne-scar concerns"
+    ]
+  }
 ];

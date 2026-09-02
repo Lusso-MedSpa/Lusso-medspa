@@ -10,39 +10,25 @@ export default function Home() {
 
     return (
         <main>
-            <section className="relative flex h-[90vh] items-center justify-center overflow-hidden">
-                <Image
-                    src="/hero.jpg"
-                    alt="Lusso"
-                    fill
-                    priority
-                    className="object-cover scale-105"
-                />
-
-                <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/35 to-black/60 backdrop-blur-[1px]" />
-
-                <FadeIn className="relative z-10 max-w-3xl px-6 text-center text-white">
-                    <p className="mb-4 text-sm uppercase tracking-[0.4em] text-rose-200">
-                        Luxury Aesthetic Clinic
-                    </p>
-
-                    <h1 className="font-serif text-5xl leading-tight md:text-7xl">
-                        Timeless Beauty,
-                        <br />
-                        Modern Techniques
-                    </h1>
-
-                    <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-                        <CTAButton href={siteConfig.bookingUrl} variant="light" external>
-                            Book Appointment
-                        </CTAButton>
-
-                        <CTAButton href="/treatments" variant="outline">
-                            Explore Treatments
-                        </CTAButton>
+            <section className="lusso-hero">
+                <div className="lusso-hero-copy">
+                    <p className="lusso-eyebrow">Lusso Med Spa · Roseville, California</p>
+                    <h1>A little refinement.<br/><em>Entirely you.</em></h1>
+                    <p className="lusso-hero-description">Thoughtful aesthetic care, shaped around your features and your goals. Explore your options with a personal consultation in Roseville.</p>
+                    <div className="mt-8 flex flex-wrap gap-4">
+                        <CTAButton href={siteConfig.bookingUrl} external>Request a Consultation</CTAButton>
+                        <CTAButton href="/treatments">Explore Treatments</CTAButton>
                     </div>
-                </FadeIn>
+                </div>
+                <div className="lusso-hero-image">
+                    <Image src="/hero.jpg" alt="Lusso aesthetic care" fill priority sizes="(max-width: 767px) 100vw, 50vw"/>
+                </div>
             </section>
+            <div className="lusso-contact-strip">
+                <a href="tel:+19166644490">{siteConfig.phone}</a>
+                <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
+                <a href="/contact">Roseville · Visit the studio ↗</a>
+            </div>
 
             <section className="luxury-glow mx-auto max-w-7xl px-6 py-20">
                 <FadeIn>
@@ -82,9 +68,9 @@ export default function Home() {
 
                     <div className="mt-12 grid gap-8 md:grid-cols-3">
                         {[
-                            "Certified Specialists",
-                            "Modern Technology",
-                            "Personalized Plans",
+                            "A Thoughtful Consultation",
+                            "Care with Intention",
+                            "A Plan Made for You",
                         ].map((item, index) => (
                             <FadeIn key={item} delay={index * 0.1}>
                                 <div className="rounded-3xl border border-white/70 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-2xl">
@@ -107,7 +93,7 @@ export default function Home() {
                 <FadeIn>
                     <div>
                         <h2 className="mt-3 font-serif text-3xl font-semibold text-stone-900 md:text-4xl">
-                            Ready to Start Your Transformation?
+                            Let’s talk about your goals.
                         </h2>
 
                         <p className="mx-auto mt-4 max-w-xl text-stone-600">

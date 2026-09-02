@@ -22,6 +22,7 @@ export default function TreatmentsGrid() {
                             key={category}
                             type="button"
                             onClick={() => setActiveCategory(category)}
+                            aria-pressed={activeCategory === category}
                             className={`rounded-full border px-5 py-2 text-sm font-medium shadow-sm transition duration-300 hover:-translate-y-0.5 ${
                                 activeCategory === category
                                     ? "border-stone-900 bg-stone-900 text-white shadow-md"
@@ -34,7 +35,7 @@ export default function TreatmentsGrid() {
                 </div>
             </FadeIn>
 
-            <div className="grid gap-8 md:grid-cols-3">
+            <div className="grid gap-8 md:grid-cols-3" aria-live="polite">
                 {filteredTreatments.map((treatment, index) => (
                     <FadeIn key={treatment.slug} delay={index * 0.08}>
                         <TreatmentCard treatment={treatment} />

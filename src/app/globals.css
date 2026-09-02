@@ -134,3 +134,40 @@ h1, h2, h3 {
     @apply font-sans;
   }
 }
+/* Lusso — white architecture, peach light and warm neutral typography. */
+@theme {
+ --color-rose-50: #fff5ef;
+ --color-rose-100: #fce8dd;
+ --color-rose-200: #f5d1bf;
+ --color-rose-300: #e9b39d;
+ --color-rose-400: #c87d65;
+ --color-rose-500: #995440;
+ --color-rose-600: #824333;
+ --color-rose-700: #703b30;
+ --color-stone-50: #fcfaf8;
+ --color-stone-100: #f5efeb;
+ --color-stone-200: #e9ded7;
+ --color-stone-500: #807168;
+ --color-stone-600: #6b5b52;
+ --color-stone-700: #55453c;
+ --color-stone-900: #352923;
+}
+:root { --background:#fff; --foreground:#352923; --primary:#995440; --primary-foreground:#fff; --secondary:#fff5ef; --secondary-foreground:#352923; --accent:#fce8dd; --accent-foreground:#352923; --muted:#fcfaf8; --muted-foreground:#6b5b52; --border:#e9ded7; --ring:#995440; }
+h1,h2,h3 {font-family:var(--font-serif),Georgia,serif;font-weight:400;letter-spacing:-.025em}
+a,button { -webkit-tap-highlight-color:transparent }
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible {outline:2px solid #995440;outline-offset:5px}
+.lusso-wordmark {color:#fdfbf9!important;text-shadow:0 1px 1px #8d7566,0 0 12px #ae8068,0 0 30px #c69b7d;letter-spacing:.14em!important}
+.lusso-hero {display:grid;grid-template-columns:1fr 1fr;min-height:76vh;background:#fff;align-items:center}
+.lusso-hero-copy {padding:6rem max(2rem,5vw);position:relative}
+.lusso-hero-copy:before {content:"";position:absolute;inset:15% 10%;background:radial-gradient(ellipse,#f5d1bf55,transparent 70%);pointer-events:none}
+.lusso-eyebrow {color:#995440;font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:1.5rem}
+.lusso-hero h1 {font-size:clamp(3.5rem,5.5vw,6rem);line-height:1.04}
+.lusso-hero h1 em {color:#995440;font-weight:400}
+.lusso-hero-description {max-width:32rem;margin-top:1.75rem;color:#6b5b52;font-size:1.05rem;line-height:1.8}
+.lusso-hero-image {position:relative;min-height:620px;height:100%;overflow:hidden;border-radius:50% 50% 0 0}
+.lusso-hero-image img {object-fit:cover}
+.lusso-contact-strip {display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;padding:1.1rem 1.5rem;background:#fff5ef;border-block:1px solid #e9ded7;font-size:.9rem}
+.lusso-contact-strip a:hover {color:#995440}
+.luxury-glow {background:radial-gradient(ellipse at top,#fff5ef88,transparent 65%)}
+@media(max-width:767px){.lusso-hero{grid-template-columns:1fr}.lusso-hero-copy{padding:4rem 1.5rem 3rem}.lusso-hero-image{min-height:360px;margin:0 1.5rem}.lusso-contact-strip{align-items:center;flex-direction:column;gap:.65rem}.lusso-hero h1{font-size:3.5rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}

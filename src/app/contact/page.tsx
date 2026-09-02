@@ -73,15 +73,15 @@ export default function ContactPage() {
                         <div className="mt-6 space-y-4 text-stone-600">
                             <p>
                                 <span className="font-medium text-stone-900">Address:</span>{" "}
-                                Roseville, CA 95661
+                                <span className="whitespace-pre-line">{siteConfig.address}</span>
                             </p>
                             <p>
                                 <span className="font-medium text-stone-900">Phone:</span>{" "}
-                                916-664-4490
+                                <a href="tel:+19166644490">{siteConfig.phone}</a>
                             </p>
                             <p>
                                 <span className="font-medium text-stone-900">Email:</span>{" "}
-                                concierge@lussomedspa.org
+                                <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
                             </p>
                             <p>
                                 <span className="font-medium text-stone-900">Hours:</span>{" "}
@@ -101,7 +101,7 @@ export default function ContactPage() {
                     <div className="overflow-hidden rounded-3xl border border-stone-200 bg-stone-200 shadow-sm">
                         <iframe
                             title="Lusso location map"
-                            src="https://www.google.com/maps?q=California,USA&output=embed"
+                            src={`https://www.google.com/maps?q=${encodeURIComponent(siteConfig.address)}&output=embed`}
                             className="h-[360px] w-full border-0"
                             loading="lazy"
                         />

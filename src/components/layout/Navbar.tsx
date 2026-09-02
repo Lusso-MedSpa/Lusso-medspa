@@ -47,7 +47,7 @@ export default function Navbar() {
                 <Link
                     href="/"
                     onClick={() => setIsOpen(false)}
-                    className="font-serif text-2xl font-semibold tracking-wide text-stone-900 transition hover:text-rose-500"
+                    className="lusso-wordmark font-serif text-2xl font-semibold tracking-wide text-stone-900 transition hover:text-rose-500"
                 >
                     Lusso
                 </Link>

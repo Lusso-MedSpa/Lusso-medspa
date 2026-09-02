@@ -18,7 +18,7 @@ export default function TreatmentCard({ treatment }: Props) {
             whileHover={{ y: -8, scale: 1.015 }}
             whileTap={{ scale: 0.98 }}
             transition={{ type: "spring", stiffness: 260, damping: 20 }}
-            className="group relative overflow-hidden rounded-3xl border border-stone-200 bg-white shadow-sm"
+            className="group block h-full relative overflow-hidden rounded-3xl border border-stone-200 bg-white shadow-sm"
         >
             <div className="pointer-events-none absolute inset-0 z-10 opacity-0 transition duration-500 group-hover:opacity-100">
                 <div className="absolute -left-12 -top-12 h-48 w-48 rounded-full bg-rose-200/40 blur-3xl" />
@@ -51,9 +51,7 @@ export default function TreatmentCard({ treatment }: Props) {
                 </p>
 
                 <div className="mt-5 flex items-center justify-between gap-4">
-          <span className="text-sm text-stone-500">
-            {treatment.duration}
-          </span>
+          
 
                     <span className="text-sm font-medium text-stone-900 transition group-hover:translate-x-1 group-hover:text-rose-500">
             Learn More →

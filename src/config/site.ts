@@ -5,5 +5,5 @@ export const siteConfig = {
     phone: "916-664-4490",
     email: "concierge@lussomedspa.org",
     address: "1411 Secret Ravine Pkwy, Suite 180\n" +
-        "Roseville,CA 95661",
+        "Roseville, CA 95661",
 };
