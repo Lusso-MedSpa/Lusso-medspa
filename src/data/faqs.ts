@@ -15,7 +15,7 @@ export const faqGroups: FAQGroup[] = [
             {
                 question: "How do I book an appointment?",
                 answer:
-                    "You can book through the contact page or by using the Book Now button.",
+                    "You can book through the contact page or by using the Consultation button.",
             },
             {
                 question: "Can I reschedule my appointment?",

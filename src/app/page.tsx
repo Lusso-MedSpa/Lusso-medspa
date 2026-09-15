@@ -114,7 +114,7 @@ export default function Home() {
                         </p>
 
                         <div className="mt-8">
-                            <CTAButton href={siteConfig.bookingUrl} external>Book Now</CTAButton>
+                            <CTAButton href={siteConfig.bookingUrl} external>Consultation</CTAButton>
                         </div>
                     </div>
                 </FadeIn>

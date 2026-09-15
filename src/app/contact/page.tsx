@@ -12,8 +12,8 @@ export default function ContactPage() {
             <PageHeader label="Get in Touch" title="Contact & Booking" description="Request an appointment or send us a message. We’ll help you find the
                     right treatment plan." />
 
-            <section className="mx-auto grid max-w-7xl gap-10 px-6 py-16 md:grid-cols-2">
-                <div className="lusso-email-panel rounded-3xl bg-white p-8 shadow-sm border border-stone-200">
+            <section className="mx-auto grid max-w-7xl items-start gap-10 px-6 py-16 md:grid-cols-2">
+                <div className="lusso-email-panel">
                     <p className="text-sm font-medium uppercase tracking-[0.3em] text-rose-500">Questions</p>
                     <h2 className="mt-4 font-serif text-3xl font-semibold text-stone-900">We’re here to help.</h2>
                     <p className="mt-6 leading-8 text-stone-600">
