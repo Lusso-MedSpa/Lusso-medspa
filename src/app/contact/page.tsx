@@ -3,65 +3,25 @@ import { siteConfig } from "@/config/site";
 
 export const metadata = {
     title: "Contact | Lusso",
-    description: "Contact Lusso to book a consultation or ask about treatments.",
+    description: "Contact Lusso to request an appointment or ask about treatments.",
 };
 
 export default function ContactPage() {
     return (
         <main>
-            <PageHeader label="Get in Touch" title="Contact & Booking" description="Book your consultation or send us a message. We’ll help you find the
+            <PageHeader label="Get in Touch" title="Contact & Booking" description="Request an appointment or send us a message. We’ll help you find the
                     right treatment plan." />
 
             <section className="mx-auto grid max-w-7xl gap-10 px-6 py-16 md:grid-cols-2">
-                <div className="rounded-3xl bg-white p-8 shadow-sm border border-stone-200">
-                    <h2 className="font-serif text-3xl font-semibold text-stone-900">
-                        Send a Message
-                    </h2>
-
-                    <form className="mt-8 space-y-5">
-                        <div>
-                            <label className="text-sm font-medium text-stone-700">Full Name</label>
-                            <input
-                                type="text"
-                                placeholder="Your name"
-                                className="mt-2 w-full rounded-2xl border border-stone-200 px-4 py-3 outline-none transition focus:border-rose-400"
-                            />
-                        </div>
-
-                        <div>
-                            <label className="text-sm font-medium text-stone-700">Email</label>
-                            <input
-                                type="email"
-                                placeholder="you@example.com"
-                                className="mt-2 w-full rounded-2xl border border-stone-200 px-4 py-3 outline-none transition focus:border-rose-400"
-                            />
-                        </div>
-
-                        <div>
-                            <label className="text-sm font-medium text-stone-700">Phone</label>
-                            <input
-                                type="tel"
-                                placeholder="+916..."
-                                className="mt-2 w-full rounded-2xl border border-stone-200 px-4 py-3 outline-none transition focus:border-rose-400"
-                            />
-                        </div>
-
-                        <div>
-                            <label className="text-sm font-medium text-stone-700">Message</label>
-                            <textarea
-                                rows={5}
-                                placeholder="Tell us what treatment you are interested in..."
-                                className="mt-2 w-full resize-none rounded-2xl border border-stone-200 px-4 py-3 outline-none transition focus:border-rose-400"
-                            />
-                        </div>
-
-                        <button
-                            type="submit"
-                            className="w-full rounded-full bg-stone-900 px-6 py-3 text-sm font-medium text-white transition hover:bg-rose-500"
-                        >
-                            Send Message
-                        </button>
-                    </form>
+                <div className="lusso-email-panel rounded-3xl bg-white p-8 shadow-sm border border-stone-200">
+                    <p className="text-sm font-medium uppercase tracking-[0.3em] text-rose-500">Questions</p>
+                    <h2 className="mt-4 font-serif text-3xl font-semibold text-stone-900">We’re here to help.</h2>
+                    <p className="mt-6 leading-8 text-stone-600">
+                        If you have any questions, send us an email to{" "}
+                        <a className="font-medium text-stone-900 underline decoration-rose-300 underline-offset-4" href="mailto:concierge.lussomedspa@gmail.com">
+                            concierge.lussomedspa@gmail.com
+                        </a>
+                    </p>
                 </div>
 
                 <div className="space-y-6">
@@ -73,10 +33,10 @@ export default function ContactPage() {
                         <div className="mt-6 space-y-4 text-stone-600">
                             <p>
                                 <span className="font-medium text-stone-900">Address:</span>{" "}
-                                <span className="whitespace-pre-line">{siteConfig.address}</span>
+                                <span>{siteConfig.address}</span>
                             </p>
                             <p>
-                                <span className="font-medium text-stone-900">Phone:</span>{" "}
+                                <span className="font-medium text-stone-900">Call us at:</span>{" "}
                                 <a href="tel:+19166644490">{siteConfig.phone}</a>
                             </p>
                             <p>

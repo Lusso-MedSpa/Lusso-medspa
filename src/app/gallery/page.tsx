@@ -1,23 +1,41 @@
 "use client";
 
 import Image from "next/image";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { galleryImages } from "@/data/gallery";
 import PageHeader from "@/components/ui/PageHeader";
 import FadeIn from "@/components/ui/FadeIn";
 
 export default function GalleryPage() {
+    const [category, setCategory] = useState<"Clinic" | "Staff">("Clinic");
+    const visibleImages = galleryImages.filter((item) => item.category === category);
+
     return (
         <main>
             <PageHeader
                 label="Gallery"
-                title="Our Space & Results"
-                description="A visual look at our treatment environment, aesthetic care, and client-focused experience."
+                title="Clinic & Staff"
+                description="A look inside our clinic and the people who welcome you."
             />
 
             <section className="luxury-glow mx-auto max-w-7xl px-6 py-16">
+                <div className="mb-10 flex justify-center gap-3" role="tablist" aria-label="Gallery categories">
+                    {(["Clinic", "Staff"] as const).map((item) => (
+                        <button
+                            key={item}
+                            type="button"
+                            role="tab"
+                            aria-selected={category === item}
+                            className="lusso-gallery-tab"
+                            onClick={() => setCategory(item)}
+                        >
+                            {item}
+                        </button>
+                    ))}
+                </div>
                 <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                    {galleryImages.map((item, index) => (
+                    {visibleImages.map((item, index) => (
                         <FadeIn key={item.id} delay={index * 0.05}>
                             <motion.div
                                 whileHover={{ y: -8, scale: 1.015 }}
@@ -37,7 +55,6 @@ export default function GalleryPage() {
                                         sizes="(max-width: 768px) 100vw, 33vw"
                                         className="object-cover transition duration-700 group-hover:scale-110 group-hover:brightness-105"
                                     />
-                                    git commit --amend --reset-author
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent opacity-0 transition duration-500 group-hover:opacity-100" />
                                 </div>
 

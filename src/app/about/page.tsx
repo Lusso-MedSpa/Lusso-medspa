@@ -9,17 +9,17 @@ export const metadata = {
 export default function AboutPage() {
     return (
         <main>
-            <PageHeader label="About Us" title="Beauty With Precision & Care" description="A modern medspa experience focused on natural results, personalized
+            <PageHeader label="About Us" title={<>A little refinement. <em>Entirely you.</em></>} description="A modern medspa experience focused on natural results, personalized
                     care, and client confidence." />
 
             <section className="mx-auto grid max-w-7xl gap-12 px-6 py-16 md:grid-cols-2">
-                <div className="relative min-h-[480px] overflow-hidden rounded-3xl bg-stone-200">
+                <div className="lusso-about-logo relative min-h-[480px] overflow-hidden rounded-3xl bg-stone-200">
                     <Image
-                        src="/about1.jpg"
-                        alt="MedSpa interior"
+                        src="/lusso-logo-dark.png"
+                        alt="Lusso MedSpa"
                         fill
                         sizes="(max-width: 768px) 100vw, 50vw"
-                        className="object-cover"
+                        className="object-contain"
                     />
                 </div>
 

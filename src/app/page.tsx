@@ -6,17 +6,29 @@ import FadeIn from "@/components/ui/FadeIn";
 import { siteConfig } from "@/config/site";
 
 export default function Home() {
-    const featuredTreatments = treatments.slice(0, 3);
+    const featuredSlugs = [
+        "botox-treatment",
+        "dermal-fillers",
+        "prp-prf",
+        "laser-hair-removal",
+        "co2-fractional-laser",
+        "skinvive",
+    ];
+    const featuredTreatments = featuredSlugs
+        .map((slug) => treatments.find((treatment) => treatment.slug === slug))
+        .filter((treatment): treatment is (typeof treatments)[number] => Boolean(treatment));
 
     return (
         <main className="lusso-home">
             <section className="lusso-hero">
                 <div className="lusso-hero-copy">
-                    <p className="lusso-eyebrow">Lusso Med Spa · Roseville, California</p>
+                    <div className="lusso-hero-logo">
+                        <Image src="/lusso-logo-light.png" alt="Lusso MedSpa" width={1696} height={1248} priority />
+                    </div>
                     <h1>A little refinement.<br/><em>Entirely you.</em></h1>
                     <p className="lusso-hero-description">Thoughtful aesthetic care, shaped around your features and your goals. Explore your options with a personal consultation in Roseville.</p>
                     <div className="mt-8 flex flex-wrap gap-4">
-                        <CTAButton href={siteConfig.bookingUrl} external>Request a Consultation</CTAButton>
+                        <CTAButton href={siteConfig.bookingUrl} external>Request an Appointment</CTAButton>
                         <CTAButton href="/treatments">Explore Treatments</CTAButton>
                     </div>
                 </div>
@@ -25,8 +37,8 @@ export default function Home() {
                 </div>
             </section>
             <div className="lusso-contact-strip">
-                <a href="tel:+19166644490">{siteConfig.phone}</a>
-                <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
+                <a href="tel:+19166644490"><strong>Call us at:</strong> {siteConfig.phone}</a>
+                <a href={`mailto:${siteConfig.email}`}><strong>Email:</strong> {siteConfig.email}</a>
                 <a href="/contact">Roseville · Visit the studio ↗</a>
             </div>
 

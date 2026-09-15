@@ -45,6 +45,7 @@ export default async function TreatmentDetailPage({ params }: Props) {
                     <p className="mt-5 text-lg leading-8 text-stone-600">
                         {treatment.description}
                     </p>
+                    {treatment.highlight && <strong className="mt-3 text-stone-900">{treatment.highlight}</strong>}
 
                     
 
@@ -59,7 +60,7 @@ export default async function TreatmentDetailPage({ params }: Props) {
                     </div>
 
                     <p className="mt-6 text-sm leading-6 text-stone-600">Treatment requires an individual clinical assessment. Results vary; risks, alternatives and aftercare will be discussed before consent.</p>
-                    <CTAButton href={treatment.slug === "exosome-therapy" ? "/contact" : siteConfig.bookingUrl} external={treatment.slug !== "exosome-therapy"}>Request a Consultation</CTAButton>
+                    <CTAButton href={treatment.slug === "exosome-therapy" ? "/contact" : siteConfig.bookingUrl} external={treatment.slug !== "exosome-therapy"}>Request an Appointment</CTAButton>
                 </div>
             </section>
         </main>

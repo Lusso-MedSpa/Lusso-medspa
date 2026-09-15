@@ -1,24 +1,22 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import type { Treatment } from "@/data/treatments";
-
-const MotionLink = motion.create(Link);
 
 type Props = {
     treatment: Treatment;
 };
 
 export default function TreatmentCard({ treatment }: Props) {
+    const [open, setOpen] = useState(false);
+
     return (
-        <MotionLink
-            href={`/treatments/${treatment.slug}`}
+        <motion.article
             whileHover={{ y: -8, scale: 1.015 }}
-            whileTap={{ scale: 0.98 }}
             transition={{ type: "spring", stiffness: 260, damping: 20 }}
-            className="group block h-full relative overflow-hidden rounded-3xl border border-stone-200 bg-white shadow-sm"
+            className="group h-full relative overflow-hidden rounded-3xl border border-stone-200 bg-white shadow-sm"
         >
             <div className="pointer-events-none absolute inset-0 z-10 opacity-0 transition duration-500 group-hover:opacity-100">
                 <div className="absolute -left-12 -top-12 h-48 w-48 rounded-full bg-rose-200/40 blur-3xl" />
@@ -42,22 +40,23 @@ export default function TreatmentCard({ treatment }: Props) {
                     {treatment.category}
                 </p>
 
-                <h3 className="mt-3 font-serif text-2xl font-semibold text-stone-900 transition group-hover:text-rose-500">
-                    {treatment.title}
+                <h3 className="mt-3">
+                    <button
+                        type="button"
+                        className="lusso-treatment-trigger"
+                        onClick={() => setOpen((value) => !value)}
+                        aria-expanded={open}
+                    >
+                        <span>{treatment.title}</span>
+                        <span aria-hidden="true">{open ? "−" : "+"}</span>
+                    </button>
                 </h3>
 
-                <p className="mt-3 text-sm leading-6 text-stone-600">
-                    {treatment.description}
-                </p>
-
-                <div className="mt-5 flex items-center justify-between gap-4">
-          
-
-                    <span className="text-sm font-medium text-stone-900 transition group-hover:translate-x-1 group-hover:text-rose-500">
-            Learn More →
-          </span>
-                </div>
+                {open && <div className="lusso-treatment-description">
+                    <p>{treatment.description}</p>
+                    {treatment.highlight && <strong>{treatment.highlight}</strong>}
+                </div>}
             </div>
-        </MotionLink>
+        </motion.article>
     );
 }

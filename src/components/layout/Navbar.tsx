@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import { useRef, useState } from "react";
 import { usePathname } from "next/navigation";
@@ -15,7 +16,9 @@ export default function Navbar() {
  const collections= treatmentCategories.filter(category=>category!=="All");
  return <header className="lusso-header" onKeyDown={event=>{if(event.key==="Escape"){setTreatmentsOpen(false);setMobileOpen(false);trigger.current?.focus()}}}>
   <div className="lusso-nav-inner">
-   <Link href="/" onClick={close} className="lusso-wordmark" aria-label="Lusso MedSpa home">Lusso<span>MEDSPA</span></Link>
+   <Link href="/" onClick={close} className="lusso-header-logo" aria-label="Lusso MedSpa home">
+    <Image src="/lusso-logo-dark.png" alt="Lusso MedSpa" width={1696} height={1248} priority />
+   </Link>
    <nav className="lusso-desktop-nav" aria-label="Main navigation">
     <Link href="/" onClick={close} aria-current={pathname==="/"?"page":undefined}>Home</Link>
     <div className="lusso-treatment-nav" onMouseEnter={()=>setTreatmentsOpen(true)} onMouseLeave={()=>setTreatmentsOpen(false)} onBlur={event=>{if(!event.currentTarget.contains(event.relatedTarget as Node|null))setTreatmentsOpen(false)}}>
@@ -27,14 +30,14 @@ export default function Navbar() {
     </div>
     {links.map(link=><Link key={link.href} href={link.href} onClick={close} aria-current={pathname.startsWith(link.href)?"page":undefined}>{link.label}</Link>)}
    </nav>
-   <Link className="lusso-nav-book" href="/contact" onClick={close}>Consultation ↗</Link>
+   <Link className="lusso-nav-book" href="/contact" onClick={close}>Request an Appointment ↗</Link>
    <button className="lusso-mobile-toggle" aria-label={mobileOpen?"Close navigation":"Open navigation"} aria-expanded={mobileOpen} aria-controls="mobile-navigation" onClick={()=>setMobileOpen(value=>!value)}>{mobileOpen?"×":"☰"}</button>
   </div>
   {mobileOpen && <nav id="mobile-navigation" className="lusso-mobile-nav" aria-label="Mobile navigation">
     <Link href="/" onClick={close}>Home</Link>
     <details><summary>Treatments</summary><Link href="/treatments" onClick={close}>Explore all treatments ↗</Link>{collections.map(category=><section key={category}><h2>{category}</h2>{treatments.filter(item=>item.category===category).map(item=><Link key={item.slug} href={`/treatments/${item.slug}`} onClick={close}><strong>{item.title}</strong><span>{item.description.split(". ")[0]}.</span></Link>)}</section>)}</details>
     {links.map(link=><Link key={link.href} href={link.href} onClick={close}>{link.label}</Link>)}
-    <a href="tel:+19166644490">Call {siteConfig.phone}</a>
+    <a href="tel:+19166644490">Call us at: {siteConfig.phone}</a>
   </nav>}
  </header>;
 }

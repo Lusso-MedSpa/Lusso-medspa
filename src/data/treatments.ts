@@ -3,6 +3,7 @@ export type Treatment = {
  title: string;
  category: string;
  description: string;
+ highlight?: string;
  image: string;
  benefits: string[];
 };
@@ -67,6 +68,17 @@ export const treatments: Treatment[] = [
     "benefits": [
       "Volume concerns",
       "Collagen-focused options"
+    ]
+  },
+  {
+    "slug": "prp-prf",
+    "title": "PRP & PRF",
+    "category": "PRP / PRF Treatments",
+    "description": "PRP and PRF use a small sample of your own blood to prepare platelet-rich components that may support clinician-directed skin or hair treatment plans. A consultation is required to review your goals, suitability, evidence, and risks.",
+    "image": "/treatments/facial.jpg",
+    "benefits": [
+      "Skin and hair consultation",
+      "Personalized regenerative planning"
     ]
   },
   {
@@ -159,9 +171,10 @@ export const treatments: Treatment[] = [
   },
   {
     "slug": "laser-hair-removal",
-    "title": "Laser Hair Removal",
+    "title": "Laser Hair Removal — Motus PRO",
     "category": "Laser Treatments",
-    "description": "Laser treatment can reduce unwanted hair over a course of sessions. Suitability and outcomes depend on skin tone, hair characteristics and the device used.",
+    "description": "Motus PRO combines Alexandrite 755 nm and Nd:YAG 1064 nm wavelengths. Its Moveo HR mode uses repeated passes to gradually heat unwanted hair, while contact delivery supports a comfortable treatment experience across a range of skin tones. Individual sensitivity can vary.",
+    "highlight": "This is pain free.",
     "image": "/treatments/laser.jpg",
     "benefits": [
       "Unwanted hair",
@@ -181,9 +194,9 @@ export const treatments: Treatment[] = [
   },
   {
     "slug": "co2-fractional-laser",
-    "title": "CO2 Fractional Laser",
+    "title": "CO₂ Fractional Laser / CoolPeel® — Tetra PRO",
     "category": "Laser Treatments",
-    "description": "Fractional resurfacing may improve selected texture, wrinkle and acne-scar concerns. Consultation covers candidacy, risks and the care needed during recovery.",
+    "description": "Tetra PRO is a customizable CO₂ resurfacing platform. Fractional CO₂ settings may address texture, fine lines, sun damage, enlarged pores, and acne-scar concerns, while CoolPeel® offers superficial resurfacing designed to limit unnecessary thermal damage and minimize downtime. Treatment intensity and recovery vary.",
     "image": "/treatments/laser.jpg",
     "benefits": [
       "Skin texture",
