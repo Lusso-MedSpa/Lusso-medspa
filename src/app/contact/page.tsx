@@ -32,7 +32,7 @@ export default function ContactPage() {
 
                         <div className="mt-6 space-y-4 text-stone-600">
                             <p>
-                                <span className="font-medium text-stone-900">Address:</span>{" "}
+                                <strong className="text-stone-900">Address:</strong>{" "}
                                 <span>{siteConfig.address}</span>
                             </p>
                             <p>
@@ -45,7 +45,7 @@ export default function ContactPage() {
                             </p>
                             <p>
                                 <span className="font-medium text-stone-900">Hours:</span>{" "}
-                                Mon - Sat, 9:00 - 18:00
+                                Mon - Sunday, 9:00 - 19:00
                             </p>
                             {siteConfig.googleReviewUrl ? <a
                                 href={siteConfig.googleReviewUrl}

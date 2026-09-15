@@ -13,30 +13,6 @@ export const galleryImages: GalleryImage[] = [
         image: "/gallery/gallery-1.jpg",
     },
     {
-        id: 2,
-        title: "Skin Care Result",
-        category: "Staff",
-        image: "/gallery/gallery-2.jpg",
-    },
-    {
-        id: 3,
-        title: "Body Treatment",
-        category: "Staff",
-        image: "/gallery/gallery-3.jpg",
-    },
-    {
-        id: 4,
-        title: "Laser Treatment Setup",
-        category: "Staff",
-        image: "/gallery/gallery-4.jpg",
-    },
-    {
-        id: 5,
-        title: "Wellness Experience",
-        category: "Staff",
-        image: "/gallery/gallery-5.jpg",
-    },
-    {
         id: 6,
         title: "Luxury Interior",
         category: "Clinic",

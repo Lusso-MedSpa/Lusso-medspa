@@ -29,7 +29,7 @@ export default function TreatmentCard({ treatment }: Props) {
                     alt={treatment.title}
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-cover transition duration-700 group-hover:scale-110 group-hover:brightness-105"
+                    className={`${treatment.imageFit === "contain" ? "object-contain" : "object-cover"} transition duration-700 group-hover:scale-105 group-hover:brightness-105`}
                 />
                 <div
                     className="absolute inset-0 bg-gradient-to-t from-black/35 via-black/5 to-transparent opacity-0 group-hover:opacity-100"/>

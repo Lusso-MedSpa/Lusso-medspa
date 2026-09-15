@@ -24,11 +24,11 @@ export default async function TreatmentDetailPage({ params }: Props) {
             <section className="mx-auto grid max-w-7xl gap-10 px-6 py-16 md:grid-cols-2">
                 <div className="relative min-h-[420px] overflow-hidden rounded-3xl bg-stone-200">
                     <Image
-                        src={treatment.image}
+                        src={treatment.detailImage ?? treatment.image}
                         alt={treatment.title}
                         fill
                         sizes="(max-width: 768px) 100vw, 50vw"
-                        className="object-cover"
+                        className={treatment.detailImageFit === "contain" || treatment.imageFit === "contain" ? "object-contain" : "object-cover"}
                         priority
                     />
                 </div>

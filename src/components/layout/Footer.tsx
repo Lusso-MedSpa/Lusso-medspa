@@ -35,7 +35,7 @@ export default function Footer() {
                 <div className="lusso-footer-contact">
                     <h4 className="font-semibold">Contact</h4>
                     <div className="mt-4 space-y-2 text-sm text-stone-900">
-                        <p>Address: {siteConfig.address}</p>
+                        <p><strong>Address:</strong> {siteConfig.address}</p>
                         <p><strong>Call us at:</strong> <a href="tel:+19166644490">{siteConfig.phone}</a></p>
                         <p><strong>Email:</strong> <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a></p>
                     </div>

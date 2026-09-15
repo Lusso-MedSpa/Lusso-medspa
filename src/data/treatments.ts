@@ -5,6 +5,9 @@ export type Treatment = {
  description: string;
  highlight?: string;
  image: string;
+ detailImage?: string;
+ imageFit?: "cover" | "contain";
+ detailImageFit?: "cover" | "contain";
  benefits: string[];
 };
 export const treatmentCategories = [
@@ -175,7 +178,9 @@ export const treatments: Treatment[] = [
     "category": "Laser Treatments",
     "description": "Motus PRO combines Alexandrite 755 nm and Nd:YAG 1064 nm wavelengths. Its Moveo HR mode uses repeated passes to gradually heat unwanted hair, while contact delivery supports a comfortable treatment experience across a range of skin tones. Individual sensitivity can vary.",
     "highlight": "This is pain free.",
-    "image": "/treatments/laser.jpg",
+    "image": "/treatments/motuspro.jpeg",
+    "detailImage": "/treatments/motus.jpeg",
+    "detailImageFit": "contain",
     "benefits": [
       "Unwanted hair",
       "Personalized laser assessment"
@@ -186,7 +191,9 @@ export const treatments: Treatment[] = [
     "title": "IPL Photofacial",
     "category": "Laser Treatments",
     "description": "Intense pulsed light may help address selected pigmentation and redness concerns. Your provider will assess skin type and suitability before treatment.",
-    "image": "/treatments/laser.jpg",
+    "image": "/treatments/tetrapro.jpeg",
+    "imageFit": "contain",
+    "detailImageFit": "contain",
     "benefits": [
       "Pigmentation concerns",
       "Redness assessment"
