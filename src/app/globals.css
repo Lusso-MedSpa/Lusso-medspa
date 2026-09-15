@@ -236,14 +236,16 @@ main .rounded-full{border-radius:3px}
 .lusso-home .lusso-hero a:last-child{background:transparent;color:#fff4eb;border-color:#f0c7aa}
 .lusso-home .lusso-hero a:hover{background:#fff4eb;color:#302923;transform:translateY(-3px)}
 .lusso-home .lusso-contact-strip{padding:1.4rem;background:#d7b39f;letter-spacing:.03em}
-.lusso-home .luxury-glow{position:relative;width:100%;max-width:none;padding:6rem max(1.5rem,calc((100vw - 1280px)/2));background:radial-gradient(ellipse at top,#d9ad966b,transparent 62%),#b9826c}
+.lusso-home .luxury-glow{position:relative;isolation:isolate;width:100%;max-width:none;overflow:hidden;padding:6rem max(1.5rem,calc((100vw - 1280px)/2));background:radial-gradient(circle at 8% 18%,#f0b89273 0,transparent 25%),radial-gradient(circle at 91% 78%,#5d40365c 0,transparent 30%),linear-gradient(125deg,#a96f58 0%,#c99178 48%,#9a6f60 100%)}
 .lusso-home .luxury-glow h2{font-size:clamp(2.5rem,4vw,4rem)}
-.lusso-home .luxury-glow:before{content:"";display:block;width:70px;height:1px;background:#9a8172;margin:0 auto 2.5rem}
-.lusso-treatment-card{background:#ead8cc;border-color:#c89b84}
-.lusso-home .lusso-philosophy{background:#c99178;border-block:1px solid #b8765d;padding-top:6rem;padding-bottom:6rem}
-.lusso-philosophy .rounded-3xl{position:relative;background:#faf7f1;border:1px solid #d8c8b5;text-align:left;padding:2.5rem;border-radius:0;box-shadow:0 10px 35px #9a817208}
+.lusso-home .luxury-glow:before{content:"";display:block;width:70px;height:1px;background:#76594d;margin:0 auto 2.5rem}
+.lusso-home .luxury-glow:after{content:"";position:absolute;z-index:-1;right:-9rem;top:-11rem;width:34rem;height:34rem;border:1px solid #f5c7a94a;border-radius:50%;box-shadow:0 0 0 4rem #f5c7a90a,0 0 0 8rem #f5c7a908;pointer-events:none}
+.lusso-treatment-card{background:linear-gradient(155deg,#f0e0d6 0%,#e3c5b4 100%);border-color:#b9826c;box-shadow:0 18px 45px #4931282e}.lusso-treatment-card:after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:linear-gradient(90deg,transparent,#c47e5f 45%,#f0b892 70%,transparent)}
+.lusso-home .lusso-philosophy{position:relative;isolation:isolate;overflow:hidden;background:radial-gradient(circle at 14% 24%,#f1bd965e 0,transparent 26%),radial-gradient(circle at 86% 82%,#6f504552 0,transparent 28%),linear-gradient(135deg,#ad725e 0%,#d09a7e 52%,#9a8172 100%);border-block:1px solid #9f6754;padding-top:6rem;padding-bottom:6rem}
+.lusso-home .lusso-philosophy:before{content:"";position:absolute;z-index:-1;left:-8rem;bottom:-12rem;width:34rem;height:34rem;border:1px solid #f7d1b657;border-radius:50%;box-shadow:0 0 0 4rem #f7d1b60a,0 0 0 8rem #f7d1b608}.lusso-home .lusso-philosophy:after{content:"";position:absolute;z-index:-1;right:8%;top:12%;width:9rem;height:1px;background:linear-gradient(90deg,transparent,#f8d5ba,transparent)}
+.lusso-philosophy .rounded-3xl{position:relative;background:linear-gradient(145deg,#faf3ee 0%,#ead5c8 100%);border:1px solid #c79b83;text-align:left;padding:2.5rem;border-radius:0;box-shadow:0 20px 50px #4d30252b}
 .lusso-step-number{display:block;font-family:var(--font-serif),Georgia,serif;font-size:3.5rem;color:#9a8172;margin-bottom:1.5rem;line-height:1}
-.lusso-philosophy .rounded-3xl:hover{box-shadow:0 22px 45px #9a817233;border-color:#9a8172}
+.lusso-philosophy .rounded-3xl:before{content:"";position:absolute;left:0;top:0;width:34%;height:3px;background:linear-gradient(90deg,#b8765d,#f0b892)}.lusso-philosophy .grid>*:nth-child(2) .rounded-3xl{background:linear-gradient(145deg,#f1ded2 0%,#d8b49f 100%)}.lusso-philosophy .rounded-3xl:hover{box-shadow:0 28px 58px #4d302542;border-color:#f0b892;transform:translateY(-3px)}
 .lusso-home .lusso-invitation{position:relative;background:radial-gradient(ellipse at top right,#b8765db0,transparent 62%),#302923;padding:6rem 1.5rem;color:#fff}
 .lusso-invitation h2{color:#f4e9da!important;font-size:clamp(2.5rem,4vw,4rem)}
 .lusso-invitation p{color:#e3d5c6!important}
