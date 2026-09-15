@@ -22,9 +22,6 @@ export default function Home() {
         <main className="lusso-home">
             <section className="lusso-hero">
                 <div className="lusso-hero-copy">
-                    <div className="lusso-hero-logo">
-                        <Image src="/lusso-logo-light.png" alt="Lusso MedSpa" width={1696} height={1248} priority />
-                    </div>
                     <h1>A little refinement.<br/><em>Entirely you.</em></h1>
                     <p className="lusso-hero-description">Thoughtful aesthetic care, shaped around your features and your goals. Explore your options with a personal consultation in Roseville.</p>
                     <div className="mt-8 flex flex-wrap gap-4">
@@ -32,8 +29,10 @@ export default function Home() {
                         <CTAButton href="/treatments">Explore Treatments</CTAButton>
                     </div>
                 </div>
-                <div className="lusso-hero-image" aria-hidden="true">
-                    <Image src="/hero.jpg" alt="" fill priority sizes="100vw"/>
+                <div className="lusso-hero-artwork" aria-hidden="true">
+                    <div className="lusso-hero-artwork-frame">
+                        <Image src="/lusso-logo-light.png" alt="" width={1696} height={1248} priority />
+                    </div>
                 </div>
             </section>
             <div className="lusso-contact-strip">
