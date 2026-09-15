@@ -16,7 +16,7 @@ export default function TreatmentCard({ treatment }: Props) {
         <motion.article
             whileHover={{ y: -8, scale: 1.015 }}
             transition={{ type: "spring", stiffness: 260, damping: 20 }}
-            className="group h-full relative overflow-hidden rounded-3xl border border-stone-200 bg-white shadow-sm"
+            className="lusso-treatment-card group h-full relative overflow-hidden rounded-3xl border border-stone-200 bg-white shadow-sm"
         >
             <div className="pointer-events-none absolute inset-0 z-10 opacity-0 transition duration-500 group-hover:opacity-100">
                 <div className="absolute -left-12 -top-12 h-48 w-48 rounded-full bg-rose-200/40 blur-3xl" />
