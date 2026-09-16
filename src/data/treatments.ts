@@ -166,7 +166,7 @@ export const treatments: Treatment[] = [
     "title": "PDO Thread Lift",
     "category": "Skin Rejuvenation",
     "description": "A minimally invasive option for selected facial laxity concerns. A clinician will discuss suitability, potential complications and realistic lifting expectations.",
-    "image": "/treatments/facial.jpg",
+    "image": "/treatments/pdo-thread-lift.webp",
     "benefits": [
       "Facial laxity",
       "Treatment consultation"
