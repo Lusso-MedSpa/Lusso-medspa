@@ -67,7 +67,7 @@ export const treatments: Treatment[] = [
     "title": "Biostimulators (Sculptra®, Radiesse®, and More)",
     "category": "Injectables & Regenerative Treatments",
     "description": "Explore collagen-stimulating injectable options for selected volume and skin-quality concerns. Results develop differently depending on the product and treatment plan.",
-    "image": "/treatments/botox.jpg",
+    "image": "/treatments/biostimulators.webp",
     "benefits": [
       "Volume concerns",
       "Collagen-focused options"
