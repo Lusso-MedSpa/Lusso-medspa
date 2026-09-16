@@ -10,7 +10,7 @@ const links = [{label:"About",href:"/about"},{label:"Gallery",href:"/gallery"},{
 export default function Navbar() {
  const [mobileOpen,setMobileOpen]=useState(false);
  const [treatmentsOpen,setTreatmentsOpen]=useState(false);
- const trigger=useRef<HTMLButtonElement>(null);
+ const trigger=useRef<HTMLAnchorElement>(null);
  const pathname=usePathname();
  const close=()=>{setMobileOpen(false);setTreatmentsOpen(false)};
  const collections= treatmentCategories.filter(category=>category!=="All");
@@ -22,7 +22,7 @@ export default function Navbar() {
    <nav className="lusso-desktop-nav" aria-label="Main navigation">
     <Link href="/" onClick={close} aria-current={pathname==="/"?"page":undefined}>Home</Link>
     <div className="lusso-treatment-nav" onMouseEnter={()=>setTreatmentsOpen(true)} onMouseLeave={()=>setTreatmentsOpen(false)} onBlur={event=>{if(!event.currentTarget.contains(event.relatedTarget as Node|null))setTreatmentsOpen(false)}}>
-     <button ref={trigger} type="button" aria-expanded={treatmentsOpen} aria-controls="treatment-mega-menu" onClick={()=>setTreatmentsOpen(value=>!value)}>Treatments</button>
+     <Link ref={trigger} href="/treatments" aria-expanded={treatmentsOpen} aria-controls="treatment-mega-menu" aria-current={pathname.startsWith("/treatments")?"page":undefined} onClick={close}>Treatments</Link>
      {treatmentsOpen && <div id="treatment-mega-menu" className="lusso-mega-menu">
       <div className="lusso-mega-heading"><div><span className="lusso-menu-eyebrow">THE TREATMENT COLLECTION</span><p>Find the care that speaks to you.</p></div><Link href="/treatments" onClick={close}>Explore all treatments ↗</Link></div>
       <div className="lusso-mega-grid">{collections.map(category=><section key={category}><h2>{category}</h2><ul>{treatments.filter(item=>item.category===category).map(item=><li key={item.slug}><Link href={`/treatments/${item.slug}`} onClick={close}><strong>{item.title}</strong><span>{item.description.split(". ")[0]}.</span></Link></li>)}</ul></section>)}</div>

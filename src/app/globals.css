@@ -178,9 +178,9 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible 
 .lusso-header{position:sticky;top:0;z-index:60;background:rgba(232,214,200,.96);border-bottom:1px solid #d2bbae;backdrop-filter:blur(20px)}
 .lusso-nav-inner{max-width:1440px;margin:auto;padding:.55rem 2rem;display:flex;align-items:center;gap:2rem}
 .lusso-desktop-nav{display:flex;align-items:center;gap:1.5rem;margin-left:auto;font-size:.9rem}
-.lusso-desktop-nav> a,.lusso-treatment-nav>button{padding:1.25rem 0;color:#4e443c}
-.lusso-treatment-nav>button{cursor:pointer;background:none;border:0;font:inherit;display:flex;gap:.5rem}
-.lusso-desktop-nav a:hover,.lusso-desktop-nav a[aria-current],.lusso-treatment-nav>button:hover{color:#9a8172}
+.lusso-desktop-nav> a,.lusso-treatment-nav>a{padding:1.25rem 0;color:#4e443c}
+.lusso-treatment-nav>a{cursor:pointer;display:flex;gap:.5rem}
+.lusso-desktop-nav a:hover,.lusso-desktop-nav a[aria-current],.lusso-treatment-nav>a:hover{color:#9a8172}
 .lusso-header-call{font-size:.8rem;white-space:nowrap}
 .lusso-nav-book{background:#302923;color:white;padding:.9rem 1.25rem;font-size:.85rem;white-space:nowrap;transition:background .2s}
 .lusso-nav-book:hover{background:#9a8172}
