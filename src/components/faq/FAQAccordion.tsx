@@ -52,6 +52,18 @@ export default function FAQAccordion() {
                                                 >
                                                     <div className="border-t border-stone-100 px-6 pb-5 pt-4 text-sm leading-7 text-stone-600">
                                                         {item.answer}
+                                                        {item.link && (
+                                                            <>
+                                                                {" "}
+                                                                <a
+                                                                    href={item.link.href}
+                                                                    className="font-medium text-stone-900 underline decoration-rose-300 underline-offset-4 hover:text-rose-500"
+                                                                    {...(item.link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                                                                >
+                                                                    {item.link.label}
+                                                                </a>
+                                                            </>
+                                                        )}
                                                     </div>
                                                 </motion.div>
                                             )}

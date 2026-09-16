@@ -1,6 +1,13 @@
+import { siteConfig } from "@/config/site";
+
 export type FAQ = {
     question: string;
     answer: string;
+    link?: {
+        label: string;
+        href: string;
+        external?: boolean;
+    };
 };
 
 export type FAQGroup = {
@@ -14,8 +21,12 @@ export const faqGroups: FAQGroup[] = [
         items: [
             {
                 question: "How do I book an appointment?",
-                answer:
-                    "You can book through the contact page or by using the Consultation button.",
+                answer: "You can book through the contact page or by using the Consultation button, or",
+                link: {
+                    label: "click here",
+                    href: siteConfig.bookingUrl,
+                    external: true,
+                },
             },
             {
                 question: "Can I reschedule my appointment?",
