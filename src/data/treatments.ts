@@ -202,9 +202,7 @@ export const treatments: Treatment[] = [
     "title": "CO₂ Fractional Laser / CoolPeel® — Tetra PRO",
     "category": "Laser Treatments",
     "description": "Tetra PRO is a customizable CO₂ resurfacing platform. Fractional CO₂ settings may address texture, fine lines, sun damage, enlarged pores, and acne-scar concerns, while CoolPeel® offers superficial resurfacing designed to limit unnecessary thermal damage and minimize downtime. Treatment intensity and recovery vary.",
-    "image": "/treatments/tetrapro.jpeg",
-    "imageFit": "contain",
-    "detailImageFit": "contain",
+    "image": "/treatments/co2-laser.webp",
     "benefits": [
       "Skin texture",
       "Acne-scar concerns"
