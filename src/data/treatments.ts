@@ -100,7 +100,7 @@ export const treatments: Treatment[] = [
     "title": "Under-Eye PRF",
     "category": "PRP / PRF Treatments",
     "description": "A clinician-led discussion of platelet-rich fibrin for under-eye concerns. Suitability, limitations and potential risks are reviewed before a personalized plan.",
-    "image": "/treatments/facial.jpg",
+    "image": "/treatments/undereye-prf.webp",
     "benefits": [
       "Under-eye concerns",
       "Individual assessment"
