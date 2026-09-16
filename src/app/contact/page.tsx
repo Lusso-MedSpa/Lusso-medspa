@@ -10,7 +10,7 @@ export default function ContactPage() {
     return (
         <main>
             <PageHeader label="Get in Touch" title="Contact & Booking" description="Request an appointment or send us a message. We’ll help you find the
-                    right treatment plan." />
+                    right treatment plan." background="luxury-glow" />
 
             <section className="mx-auto grid max-w-7xl items-start gap-10 px-6 py-16 md:grid-cols-2">
                 <div className="lusso-email-panel">

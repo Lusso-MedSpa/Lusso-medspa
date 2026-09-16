@@ -13,6 +13,7 @@ export default function TermsPage() {
                 label="Legal"
                 title="Terms & Conditions"
                 description="Please read these terms before using our website or booking services."
+                background="luxury-glow"
             />
 
             <section className="mx-auto max-w-4xl px-6 py-16">

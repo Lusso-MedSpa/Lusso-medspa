@@ -17,9 +17,11 @@ export default function GalleryPage() {
                 label="Gallery"
                 title="Clinic & Staff"
                 description="A look inside our clinic and the people who welcome you."
+                background="luxury-glow"
             />
 
-            <section className="luxury-glow mx-auto max-w-7xl px-6 py-16">
+            <section className="luxury-glow py-16">
+            <div className="mx-auto max-w-7xl px-6">
                 <div className="mb-10 flex justify-center gap-3" role="tablist" aria-label="Gallery categories">
                     {(["Clinic", "Staff"] as const).map((item) => (
                         <button
@@ -71,6 +73,7 @@ export default function GalleryPage() {
                         </FadeIn>
                     ))}
                 </div>
+            </div>
             </section>
         </main>
     );

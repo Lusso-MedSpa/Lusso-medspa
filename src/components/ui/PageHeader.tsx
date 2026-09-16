@@ -7,7 +7,7 @@ type PageHeaderProps = {
     background?: string;
 };
 
-export default function PageHeader({ label, title, description, background = "bg-stone-180" }: PageHeaderProps) {
+export default function PageHeader({ label, title, description, background = "luxury-glow" }: PageHeaderProps) {
     return (
         <section className={`${background} px-6 py-20 text-center`}>
             <p className="text-sm font-medium uppercase tracking-[0.3em] text-rose-500">

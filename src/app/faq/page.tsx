@@ -10,7 +10,7 @@ export default function FAQPage() {
     return (
         <main>
             <PageHeader label="Questions" title="Frequently Asked Questions" description="Find answers about booking, treatments, preparation, safety, and
-                    aftercare." />
+                    aftercare." background="luxury-glow" />
 
             <FAQAccordion />
         </main>

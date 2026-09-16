@@ -13,6 +13,7 @@ export default function PrivacyPage() {
                 label="Legal"
                 title="Privacy Policy"
                 description="Learn how we collect, use, and protect your information."
+                background="luxury-glow"
             />
 
             <section className="mx-auto max-w-4xl px-6 py-16">
