@@ -144,7 +144,7 @@ export const treatments: Treatment[] = [
     "title": "Microneedling with Hyaluronic Acid (HA)",
     "category": "PRP / PRF Treatments",
     "description": "Explore microneedling and hydration-focused skin care. Your clinician will confirm suitable products and explain the risks and limitations of the proposed combination.",
-    "image": "/treatments/facial.jpg",
+    "image": "/treatments/microneedling-ha.webp",
     "benefits": [
       "Texture assessment",
       "Hydration-focused care"
