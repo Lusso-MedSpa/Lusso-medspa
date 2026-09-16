@@ -133,7 +133,7 @@ export const treatments: Treatment[] = [
     "title": "Microneedling with PRF",
     "category": "PRP / PRF Treatments",
     "description": "A consultation-led approach to microneedling and platelet-rich fibrin. Your provider will explain the proposed method, aftercare and realistic expectations.",
-    "image": "/treatments/facial.jpg",
+    "image": "/treatments/microneedling-prf.webp",
     "benefits": [
       "Skin texture",
       "Aftercare planning"
