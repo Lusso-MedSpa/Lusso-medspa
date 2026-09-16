@@ -111,7 +111,7 @@ export const treatments: Treatment[] = [
     "title": "Full Face PRF",
     "category": "PRP / PRF Treatments",
     "description": "Platelet-rich fibrin may be used within an individualized facial treatment plan. Your clinician will explain the evidence, potential benefits and risks.",
-    "image": "/treatments/facial.jpg",
+    "image": "/treatments/fullface-prf.webp",
     "benefits": [
       "Skin-quality concerns",
       "Individualized care"
