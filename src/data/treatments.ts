@@ -23,7 +23,7 @@ export const treatments: Treatment[] = [
     "title": "Botox® / Dysport®",
     "category": "Injectables & Regenerative Treatments",
     "description": "Prescription injectables that temporarily soften expression lines by relaxing selected facial muscles. Your clinician will assess suitability and discuss risks and expected results.",
-    "image": "/treatments/botox-vial.png",
+    "image": "/treatments/botox-vial.webp",
     "benefits": [
       "Expression lines",
       "Individualized assessment"
@@ -78,7 +78,7 @@ export const treatments: Treatment[] = [
     "title": "PRP & PRF",
     "category": "PRP / PRF Treatments",
     "description": "PRP and PRF use a small sample of your own blood to prepare platelet-rich components that may support clinician-directed skin or hair treatment plans. A consultation is required to review your goals, suitability, evidence, and risks.",
-    "image": "/treatments/prp.png",
+    "image": "/treatments/prp.webp",
     "benefits": [
       "Skin and hair consultation",
       "Personalized regenerative planning"
@@ -89,7 +89,7 @@ export const treatments: Treatment[] = [
     "title": "Hair PRF",
     "category": "PRP / PRF Treatments",
     "description": "Platelet-rich fibrin prepared from your own blood may be considered for selected hair concerns. Evidence and results vary; an assessment helps identify the underlying cause.",
-    "image": "/treatments/prf.png",
+    "image": "/treatments/prf.webp",
     "benefits": [
       "Hair assessment",
       "Treatment suitability"
