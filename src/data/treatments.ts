@@ -23,7 +23,7 @@ export const treatments: Treatment[] = [
     "title": "Botox® / Dysport®",
     "category": "Injectables & Regenerative Treatments",
     "description": "Prescription injectables that temporarily soften expression lines by relaxing selected facial muscles. Your clinician will assess suitability and discuss risks and expected results.",
-    "image": "/treatments/botox.jpg",
+    "image": "/treatments/botox-vial.png",
     "benefits": [
       "Expression lines",
       "Individualized assessment"
