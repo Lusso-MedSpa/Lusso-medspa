@@ -74,7 +74,7 @@ export default function AboutPage() {
                                 text: "Our goal is to help clients feel refreshed, confident, and comfortable.",
                             },
                         ].map((item) => (
-                            <div key={item.title} className="rounded-3xl bg-white p-8 shadow-sm">
+                            <div key={item.title} className="lusso-highlight-card rounded-3xl p-8">
                                 <h3 className="font-serif text-2xl font-semibold text-stone-900">
                                     {item.title}
                                 </h3>
