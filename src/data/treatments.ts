@@ -78,7 +78,7 @@ export const treatments: Treatment[] = [
     "title": "PRP & PRF",
     "category": "PRP / PRF Treatments",
     "description": "PRP and PRF use a small sample of your own blood to prepare platelet-rich components that may support clinician-directed skin or hair treatment plans. A consultation is required to review your goals, suitability, evidence, and risks.",
-    "image": "/treatments/facial.jpg",
+    "image": "/treatments/prp.png",
     "benefits": [
       "Skin and hair consultation",
       "Personalized regenerative planning"
