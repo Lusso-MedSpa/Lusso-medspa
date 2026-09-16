@@ -56,7 +56,7 @@ export const treatments: Treatment[] = [
     "title": "Redensity",
     "category": "Injectables & Regenerative Treatments",
     "description": "Discuss hyaluronic acid treatment options with your clinician. The specific product, intended use and suitability will be confirmed before treatment.",
-    "image": "/treatments/facial.jpg",
+    "image": "/treatments/redensity.webp",
     "benefits": [
       "Product consultation",
       "Personalized planning"
