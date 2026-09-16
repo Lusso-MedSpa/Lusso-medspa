@@ -89,7 +89,7 @@ export const treatments: Treatment[] = [
     "title": "Hair PRF",
     "category": "PRP / PRF Treatments",
     "description": "Platelet-rich fibrin prepared from your own blood may be considered for selected hair concerns. Evidence and results vary; an assessment helps identify the underlying cause.",
-    "image": "/treatments/facial.jpg",
+    "image": "/treatments/prf.png",
     "benefits": [
       "Hair assessment",
       "Treatment suitability"
