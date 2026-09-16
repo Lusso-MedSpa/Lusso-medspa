@@ -4,6 +4,7 @@ import Image from "next/image";
 import CTAButton from "@/components/ui/CTAButton";
 import FadeIn from "@/components/ui/FadeIn";
 import { siteConfig } from "@/config/site";
+import { ArrowUpRight } from "lucide-react";
 
 export default function Home() {
     const featuredSlugs = [
@@ -38,7 +39,7 @@ export default function Home() {
             <div className="lusso-contact-strip">
                 <a href="tel:+19166644490"><strong>Call us at:</strong> {siteConfig.phone}</a>
                 <a href={`mailto:${siteConfig.email}`}><strong>Email:</strong> {siteConfig.email}</a>
-                <a href="/contact">Roseville · Visit the studio ↗</a>
+                <a href="/contact">Roseville · Visit the studio <ArrowUpRight className="inline h-4 w-4 align-[-2px]" aria-hidden="true" /></a>
             </div>
 
             <section className="luxury-glow mx-auto max-w-7xl px-6 py-20">

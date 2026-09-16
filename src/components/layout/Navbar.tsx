@@ -5,6 +5,7 @@ import { useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { siteConfig } from "@/config/site";
 import { treatmentCategories, treatments } from "@/data/treatments";
+import { ArrowUpRight } from "lucide-react";
 
 const links = [{label:"About",href:"/about"},{label:"Gallery",href:"/gallery"},{label:"FAQ",href:"/faq"},{label:"Contact",href:"/contact"}];
 export default function Navbar() {
@@ -24,18 +25,18 @@ export default function Navbar() {
     <div className="lusso-treatment-nav" onMouseEnter={()=>setTreatmentsOpen(true)} onMouseLeave={()=>setTreatmentsOpen(false)} onBlur={event=>{if(!event.currentTarget.contains(event.relatedTarget as Node|null))setTreatmentsOpen(false)}}>
      <Link ref={trigger} href="/treatments" aria-expanded={treatmentsOpen} aria-controls="treatment-mega-menu" aria-current={pathname.startsWith("/treatments")?"page":undefined} onClick={close}>Treatments</Link>
      {treatmentsOpen && <div id="treatment-mega-menu" className="lusso-mega-menu">
-      <div className="lusso-mega-heading"><div><span className="lusso-menu-eyebrow">THE TREATMENT COLLECTION</span><p>Find the care that speaks to you.</p></div><Link href="/treatments" onClick={close}>Explore all treatments ↗</Link></div>
+      <div className="lusso-mega-heading"><div><span className="lusso-menu-eyebrow">THE TREATMENT COLLECTION</span><p>Find the care that speaks to you.</p></div><Link href="/treatments" onClick={close}>Explore all treatments <ArrowUpRight className="inline h-4 w-4 align-[-2px]" aria-hidden="true" /></Link></div>
       <div className="lusso-mega-grid">{collections.map(category=><section key={category}><h2>{category}</h2><ul>{treatments.filter(item=>item.category===category).map(item=><li key={item.slug}><Link href={`/treatments/${item.slug}`} onClick={close}><strong>{item.title}</strong><span>{item.description.split(". ")[0]}.</span></Link></li>)}</ul></section>)}</div>
      </div>}
     </div>
     {links.map(link=><Link key={link.href} href={link.href} onClick={close} aria-current={pathname.startsWith(link.href)?"page":undefined}>{link.label}</Link>)}
    </nav>
-   <Link className="lusso-nav-book" href="/contact" onClick={close}>Request an Appointment ↗</Link>
+   <Link className="lusso-nav-book" href="/contact" onClick={close}>Request an Appointment <ArrowUpRight className="inline h-4 w-4 align-[-2px]" aria-hidden="true" /></Link>
    <button className="lusso-mobile-toggle" aria-label={mobileOpen?"Close navigation":"Open navigation"} aria-expanded={mobileOpen} aria-controls="mobile-navigation" onClick={()=>setMobileOpen(value=>!value)}>{mobileOpen?"×":"☰"}</button>
   </div>
   {mobileOpen && <nav id="mobile-navigation" className="lusso-mobile-nav" aria-label="Mobile navigation">
     <Link href="/" onClick={close}>Home</Link>
-    <details><summary>Treatments</summary><Link href="/treatments" onClick={close}>Explore all treatments ↗</Link>{collections.map(category=><section key={category}><h2>{category}</h2>{treatments.filter(item=>item.category===category).map(item=><Link key={item.slug} href={`/treatments/${item.slug}`} onClick={close}><strong>{item.title}</strong><span>{item.description.split(". ")[0]}.</span></Link>)}</section>)}</details>
+    <details><summary>Treatments</summary><Link href="/treatments" onClick={close}>Explore all treatments <ArrowUpRight className="inline h-4 w-4 align-[-2px]" aria-hidden="true" /></Link>{collections.map(category=><section key={category}><h2>{category}</h2>{treatments.filter(item=>item.category===category).map(item=><Link key={item.slug} href={`/treatments/${item.slug}`} onClick={close}><strong>{item.title}</strong><span>{item.description.split(". ")[0]}.</span></Link>)}</section>)}</details>
     {links.map(link=><Link key={link.href} href={link.href} onClick={close}>{link.label}</Link>)}
     <a href="tel:+19166644490">Call us at: {siteConfig.phone}</a>
   </nav>}
