@@ -45,7 +45,7 @@ export const treatments: Treatment[] = [
     "title": "Skinvive™",
     "category": "Injectables & Regenerative Treatments",
     "description": "An injectable hyaluronic acid treatment used to improve cheek skin smoothness. A consultation determines whether it is appropriate for your skin.",
-    "image": "/treatments/facial.jpg",
+    "image": "/treatments/skinvive.webp",
     "benefits": [
       "Cheek smoothness",
       "Skin quality"
