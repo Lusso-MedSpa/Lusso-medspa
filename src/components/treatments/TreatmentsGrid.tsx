@@ -14,7 +14,8 @@ export default function TreatmentsGrid() {
             : treatments.filter((item) => item.category === activeCategory);
 
     return (
-        <section className="luxury-glow mx-auto max-w-7xl px-6 py-16">
+        <section className="luxury-glow py-16">
+            <div className="mx-auto max-w-7xl px-6">
             <FadeIn>
                 <div className="mb-12 flex flex-wrap justify-center gap-3">
                     {treatmentCategories.map((category) => (
@@ -41,6 +42,7 @@ export default function TreatmentsGrid() {
                         <TreatmentCard treatment={treatment} />
                     </FadeIn>
                 ))}
+            </div>
             </div>
         </section>
     );
