@@ -34,7 +34,7 @@ export const treatments: Treatment[] = [
     "title": "Dermal Fillers (Hyaluronic Acid)",
     "category": "Injectables & Regenerative Treatments",
     "description": "Hyaluronic acid fillers can restore volume and enhance facial contours. Product selection and placement are tailored to your anatomy and goals.",
-    "image": "/treatments/botox.jpg",
+    "image": "/treatments/filler.webp",
     "benefits": [
       "Facial volume",
       "Balanced contours"
