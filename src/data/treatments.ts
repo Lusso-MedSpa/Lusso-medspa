@@ -191,9 +191,7 @@ export const treatments: Treatment[] = [
     "title": "IPL Photofacial",
     "category": "Laser Treatments",
     "description": "Intense pulsed light may help address selected pigmentation and redness concerns. Your provider will assess skin type and suitability before treatment.",
-    "image": "/treatments/tetrapro.jpeg",
-    "imageFit": "contain",
-    "detailImageFit": "contain",
+    "image": "/treatments/laser.jpg",
     "benefits": [
       "Pigmentation concerns",
       "Redness assessment"
@@ -204,7 +202,9 @@ export const treatments: Treatment[] = [
     "title": "CO₂ Fractional Laser / CoolPeel® — Tetra PRO",
     "category": "Laser Treatments",
     "description": "Tetra PRO is a customizable CO₂ resurfacing platform. Fractional CO₂ settings may address texture, fine lines, sun damage, enlarged pores, and acne-scar concerns, while CoolPeel® offers superficial resurfacing designed to limit unnecessary thermal damage and minimize downtime. Treatment intensity and recovery vary.",
-    "image": "/treatments/laser.jpg",
+    "image": "/treatments/tetrapro.jpeg",
+    "imageFit": "contain",
+    "detailImageFit": "contain",
     "benefits": [
       "Skin texture",
       "Acne-scar concerns"
