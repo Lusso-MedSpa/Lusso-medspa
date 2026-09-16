@@ -12,7 +12,8 @@ export default function AboutPage() {
             <PageHeader label="About Us" title={<>A little refinement. <em>Entirely you.</em></>} description="A modern medspa experience focused on natural results, personalized
                     care, and client confidence." background="luxury-glow" />
 
-            <section className="mx-auto grid max-w-7xl gap-12 px-6 py-16 md:grid-cols-2">
+            <section className="luxury-glow py-16">
+            <div className="mx-auto grid max-w-7xl gap-12 px-6 md:grid-cols-2">
                 <div className="lusso-about-logo relative min-h-[480px] overflow-hidden rounded-3xl bg-stone-200">
                     <Image
                         src="/lusso-logo-dark.png"
@@ -45,6 +46,7 @@ export default function AboutPage() {
                         client-centered experience.
                     </p>
                 </div>
+            </div>
             </section>
 
             <section className="luxury-glow px-6 py-20">

@@ -8,7 +8,8 @@ export default function FAQAccordion() {
     const [openItem, setOpenItem] = useState<string | null>(null);
 
     return (
-        <section className="mx-auto max-w-4xl px-6 py-16">
+        <section className="luxury-glow py-16">
+        <div className="mx-auto max-w-4xl px-6">
             <div className="space-y-10">
                 {faqGroups.map((group) => (
                     <div key={group.category}>
@@ -62,6 +63,7 @@ export default function FAQAccordion() {
                     </div>
                 ))}
             </div>
+        </div>
         </section>
     );
 }
