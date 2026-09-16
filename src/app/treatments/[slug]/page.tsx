@@ -10,6 +10,12 @@ type Props = {
     }>;
 };
 
+export function generateStaticParams() {
+    return treatments.map((treatment) => ({
+        slug: treatment.slug,
+    }));
+}
+
 export default async function TreatmentDetailPage({ params }: Props) {
     const { slug } = await params;
 
