@@ -13,6 +13,7 @@ export default function TreatmentsPage() {
                 label="Our Services"
                 title="Treatments"
                 description="Explore four treatment collections. Your consultation helps determine what is appropriate for your skin, features and goals."
+                background="luxury-glow"
             />
 
             <TreatmentsGrid />
