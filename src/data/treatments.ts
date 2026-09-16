@@ -122,7 +122,7 @@ export const treatments: Treatment[] = [
     "title": "Vampire Facial® (PRP/PRF Microneedling)",
     "category": "PRP / PRF Treatments",
     "description": "Discuss microneedling with platelet-based preparations for skin texture and scar concerns. Evidence, device compatibility and suitability require clinical review.",
-    "image": "/treatments/facial.jpg",
+    "image": "/treatments/vampire-facial.webp",
     "benefits": [
       "Texture concerns",
       "Scar assessment"
