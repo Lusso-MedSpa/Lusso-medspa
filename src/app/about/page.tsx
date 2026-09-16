@@ -13,14 +13,15 @@ export default function AboutPage() {
                     care, and client confidence." background="luxury-glow" />
 
             <section className="luxury-glow py-16">
-            <div className="mx-auto grid max-w-7xl gap-12 px-6 md:grid-cols-2">
-                <div className="lusso-about-logo relative min-h-[480px] overflow-hidden rounded-3xl bg-stone-200">
+            <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 md:grid-cols-2">
+                <div className="lusso-about-logo-float">
                     <Image
                         src="/lusso-logo-dark.png"
                         alt="Lusso MedSpa"
-                        fill
-                        sizes="(max-width: 768px) 100vw, 50vw"
-                        className="object-contain"
+                        width={1696}
+                        height={1248}
+                        className="relative z-10 h-auto w-full max-w-sm md:max-w-md"
+                        priority
                     />
                 </div>
 

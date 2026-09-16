@@ -251,7 +251,10 @@ main .rounded-full{border-radius:3px}
 .lusso-invitation p{color:#e3d5c6!important}
 .lusso-invitation a{background:#e3cdb3;color:#302923;border:1px solid #e3cdb3}
 .lusso-invitation a:hover{background:#fff}
-.lusso-about-logo{background:radial-gradient(circle at 50% 45%,#efe2da 0,#c99178 75%);padding:2rem}
+.lusso-about-logo-float{position:relative;isolation:isolate;display:flex;align-items:center;justify-content:center;min-height:480px}
+.lusso-about-logo-float:before{content:"";position:absolute;z-index:-1;width:min(85%,480px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,#f3b47766 0,#c982622e 45%,transparent 72%);filter:blur(36px)}
+.lusso-about-logo-float:after{content:"";position:absolute;z-index:-1;width:min(72%,400px);aspect-ratio:1;border:1px solid #c9917840;border-radius:50%}
+@media(max-width:767px){.lusso-about-logo-float{min-height:320px}}
 .lusso-treatment-trigger{display:flex;width:100%;align-items:flex-start;justify-content:space-between;gap:1rem;text-align:left;font-family:var(--font-serif),Georgia,serif;font-size:1.35rem;line-height:1.25;color:#302923;cursor:pointer}.lusso-treatment-trigger span:last-child{font-family:Arial,sans-serif;font-size:1.5rem;font-weight:300;color:#9a8172;line-height:1}.lusso-treatment-description{margin-top:1rem;border-top:1px solid #e3dacf;padding-top:1rem;color:#6b5b52;font-size:.9rem;line-height:1.7}.lusso-treatment-description strong{display:block;margin-top:.75rem;color:#302923}
 .lusso-gallery-tab{min-width:115px;border:1px solid #cdbda9;padding:.75rem 1.25rem;background:#fff;color:#4e443c;cursor:pointer;transition:.2s}.lusso-gallery-tab[aria-selected="true"]{background:#302923;color:#fff;border-color:#302923}
 .lusso-email-panel{position:relative;max-width:36rem;border-left:2px solid #9a8172;padding:1rem 0 1rem 2rem}.lusso-email-panel:before{content:"";position:absolute;left:-6px;top:0;width:10px;height:10px;border-radius:50%;background:#9a8172}.lusso-email-panel h2{font-size:clamp(2.4rem,4vw,4rem);line-height:1.05}.lusso-email-panel a{overflow-wrap:anywhere}
@@ -261,5 +264,5 @@ main .rounded-full{border-radius:3px}
 @media(max-width:1050px) and (min-width:901px){.lusso-desktop-nav{gap:1rem}.lusso-nav-inner{padding-inline:1rem;gap:1rem}}
 @media(max-width:900px){.lusso-header-logo{width:112px}.lusso-footer-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.lusso-footer-contact{grid-column:1/-1}.lusso-home .lusso-hero{grid-template-columns:1fr;gap:2.5rem;padding:4rem 2rem}.lusso-hero-artwork{min-height:0}.lusso-hero-artwork-frame{width:min(100%,480px)}}
 @media(max-width:540px){.lusso-nav-book{display:none}.lusso-mobile-toggle{margin-left:auto}}
-@media(max-width:767px){.lusso-home .lusso-hero{padding:3.5rem 1.5rem;min-height:auto}.lusso-home .lusso-hero h1{font-size:clamp(3rem,15vw,4.6rem)}.lusso-home .lusso-hero-description{font-size:1rem}.lusso-home .lusso-hero-copy{padding:0}.lusso-home .lusso-hero a{width:100%;justify-content:center}.lusso-home .lusso-eyebrow{font-size:.75rem}.lusso-about-logo{min-height:340px}.lusso-footer-grid{grid-template-columns:1fr}.lusso-footer-contact{grid-column:auto}.lusso-hero-artwork-frame{padding:1.25rem}}
+@media(max-width:767px){.lusso-home .lusso-hero{padding:3.5rem 1.5rem;min-height:auto}.lusso-home .lusso-hero h1{font-size:clamp(3rem,15vw,4.6rem)}.lusso-home .lusso-hero-description{font-size:1rem}.lusso-home .lusso-hero-copy{padding:0}.lusso-home .lusso-hero a{width:100%;justify-content:center}.lusso-home .lusso-eyebrow{font-size:.75rem}.lusso-footer-grid{grid-template-columns:1fr}.lusso-footer-contact{grid-column:auto}.lusso-hero-artwork-frame{padding:1.25rem}}
 @media(pointer:coarse),(prefers-reduced-motion:reduce){.lusso-cursor-glow{display:none}}
