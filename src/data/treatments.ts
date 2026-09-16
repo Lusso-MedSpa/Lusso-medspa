@@ -155,7 +155,7 @@ export const treatments: Treatment[] = [
     "title": "Exosome Therapy",
     "category": "Skin Rejuvenation",
     "description": "There are currently no FDA-approved exosome products. This topic requires medical and regulatory review and is not available for routine booking through this website.",
-    "image": "/treatments/facial.jpg",
+    "image": "/treatments/exosome.webp",
     "benefits": [
       "Clinical evidence review",
       "Regulatory safety discussion"
