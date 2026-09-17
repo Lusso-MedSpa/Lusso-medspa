@@ -31,7 +31,7 @@ export default function Navbar() {
     </div>
     {links.map(link=><Link key={link.href} href={link.href} onClick={close} aria-current={pathname.startsWith(link.href)?"page":undefined}>{link.label}</Link>)}
    </nav>
-   <Link className="lusso-nav-book" href="/contact" onClick={close}>Request an Appointment <ArrowUpRight className="inline h-4 w-4 align-[-2px]" aria-hidden="true" /></Link>
+   <a className="lusso-nav-book" href={siteConfig.bookingUrl} target="_blank" rel="noopener noreferrer" onClick={close}>Request an Appointment <ArrowUpRight className="inline h-4 w-4 align-[-2px]" aria-hidden="true" /></a>
    <button className="lusso-mobile-toggle" aria-label={mobileOpen?"Close navigation":"Open navigation"} aria-expanded={mobileOpen} aria-controls="mobile-navigation" onClick={()=>setMobileOpen(value=>!value)}>{mobileOpen?"×":"☰"}</button>
   </div>
   {mobileOpen && <nav id="mobile-navigation" className="lusso-mobile-nav" aria-label="Mobile navigation">
