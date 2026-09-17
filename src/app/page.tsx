@@ -25,9 +25,9 @@ export default function Home() {
                 <div className="lusso-hero-copy">
                     <h1>A little refinement.<br/><em>Entirely you.</em></h1>
                     <p className="lusso-hero-description">Thoughtful aesthetic care, shaped around your features and your goals. Explore your options with a personal consultation in Roseville.</p>
-                    <div className="mt-8 flex flex-wrap gap-4">
-                        <CTAButton href={siteConfig.bookingUrl} external>Request an Appointment</CTAButton>
+                    <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center">
                         <CTAButton href="/treatments">Explore Treatments</CTAButton>
+                        <CTAButton href={siteConfig.bookingUrl} external>Request an Appointment</CTAButton>
                     </div>
                 </div>
                 <div className="lusso-hero-artwork" aria-hidden="true">
