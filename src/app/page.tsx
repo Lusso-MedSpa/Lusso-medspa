@@ -91,7 +91,7 @@ export default function Home() {
                                 ))}
                             </ul>
                             <div className="mt-8">
-                                <a href="https://www.carecredit.com/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-[#765448] px-6 py-3 text-sm font-medium text-[#5f443b] transition hover:bg-[#765448] hover:text-white">
+                                <a href="https://go.carecredit.com/consumer/home?sitecode=CCCALDS2X" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-[#765448] px-6 py-3 text-sm font-medium text-[#5f443b] transition hover:bg-[#765448] hover:text-white">
                                     Learn about CareCredit <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
                                 </a>
                             </div>
