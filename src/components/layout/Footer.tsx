@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Instagram } from "lucide-react";
 import { siteConfig } from "@/config/site";
 
 export default function Footer() {
@@ -11,6 +12,15 @@ export default function Footer() {
                         Luxury aesthetic treatments designed to help you feel confident,
                         refreshed, and naturally radiant.
                     </p>
+                    <a
+                        href="https://www.instagram.com/lusso_medspa?stkn=MWxhZDI0Ymt4M28zNw=="
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Lusso MedSpa on Instagram"
+                        className="mt-5 inline-flex h-10 w-10 items-center justify-center rounded-full border border-stone-400/60 text-stone-800 transition hover:-translate-y-0.5 hover:border-stone-900 hover:bg-stone-900 hover:text-white"
+                    >
+                        <Instagram className="h-5 w-5" aria-hidden="true" />
+                    </a>
                 </div>
 
                 <div>
