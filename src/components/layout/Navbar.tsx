@@ -7,7 +7,7 @@ import { siteConfig } from "@/config/site";
 import { treatmentCategories, treatments } from "@/data/treatments";
 import { ArrowUpRight } from "lucide-react";
 
-const links = [{label:"About",href:"/about"},{label:"Gallery",href:"/gallery"},{label:"FAQ",href:"/faq"},{label:"Contact",href:"/contact"}];
+const links = [{label:"Payment Methods",href:"/payment-methods"},{label:"About",href:"/about"},{label:"Gallery",href:"/gallery"},{label:"FAQ",href:"/faq"},{label:"Contact",href:"/contact"}];
 export default function Navbar() {
  const [mobileOpen,setMobileOpen]=useState(false);
  const [treatmentsOpen,setTreatmentsOpen]=useState(false);
