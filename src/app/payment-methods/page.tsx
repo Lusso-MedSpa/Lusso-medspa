@@ -4,7 +4,7 @@ import { ArrowUpRight, Check } from "lucide-react";
 export default function PaymentMethods() {
     return (
         <main>
-            <section className="px-6 py-16 text-center md:py-20">
+            <section className="luxury-glow px-6 py-16 text-center md:py-20">
                 <div className="mx-auto max-w-3xl">
                     <p className="text-sm font-medium uppercase tracking-[0.3em] text-[#9b6f63]">Payment Methods</p>
                     <h1 className="mt-3 font-serif text-4xl font-semibold text-stone-900 md:text-5xl">Flexible ways to pay for your care.</h1>
