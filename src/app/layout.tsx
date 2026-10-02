@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 import CursorGlow from "@/components/ui/CursorGlow";
 import Navbar from "@/components/layout/Navbar";
@@ -26,6 +27,18 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en" data-scroll-behavior="smooth" className={cn(playfair.variable, "font-sans", geist.variable)}>
+        <head>
+            <Script
+                src="https://www.googletagmanager.com/gtag/js?id=G-F5910KJPSH"
+                strategy="afterInteractive"
+            />
+            <Script id="ga" strategy="afterInteractive">{`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-F5910KJPSH');
+            `}</Script>
+        </head>
         <body className="bg-white text-stone-900 antialiased font-sans">
         <CursorGlow />
         <Navbar />
