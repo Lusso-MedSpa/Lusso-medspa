@@ -7,22 +7,22 @@ import PageHeader from "@/components/ui/PageHeader";
 import FadeIn from "@/components/ui/FadeIn";
 
 export default function GalleryPage() {
-    const [category, setCategory] = useState<"Clinic" | "Staff">("Clinic");
+    const [category, setCategory] = useState<"Clinic" | "Treatment Rooms">("Clinic");
     const visibleImages = galleryImages.filter((item) => item.category === category);
 
     return (
         <main>
             <PageHeader
                 label="Gallery"
-                title="Clinic & Staff"
-                description="A look inside our clinic and the people who welcome you."
+                title="Clinic & Treatment Rooms"
+                description="A look inside our clinic and treatment rooms."
                 background="luxury-glow"
             />
 
             <section className="luxury-glow py-16">
             <div className="mx-auto max-w-6xl px-6">
                 <div className="mb-10 flex justify-center gap-3" role="tablist" aria-label="Gallery categories">
-                    {(["Clinic", "Staff"] as const).map((item) => (
+                    {(["Clinic", "Treatment Rooms"] as const).map((item) => (
                         <button
                             key={item}
                             type="button"
@@ -50,18 +50,6 @@ export default function GalleryPage() {
                                         className="block h-auto w-full"
                                         loading="lazy"
                                     />
-                                    <div
-                                        className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#211913]/85 via-[#211913]/35 to-transparent"
-                                        aria-hidden="true"
-                                    />
-                                    <figcaption className="absolute inset-x-0 bottom-0 p-6 text-white">
-                                        <p className="text-[10px] font-medium uppercase tracking-[0.3em] text-[#f0d9c8]">
-                                            {item.category}
-                                        </p>
-                                        <h2 className="mt-2 font-serif text-xl font-medium leading-snug drop-shadow-sm">
-                                            {item.title}
-                                        </h2>
-                                    </figcaption>
                                 </motion.figure>
                             </FadeIn>
                         </div>
