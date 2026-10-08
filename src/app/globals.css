@@ -270,11 +270,10 @@ main .rounded-full{border-radius:3px}
 /* Keep the first hero line prominent on phones without wrapping. */
 @media (max-width: 767px) {
   .lusso-home .lusso-hero h1 > span:first-child {
-    font-size: clamp(2.65rem, 11.5vw, 3.55rem);
-    letter-spacing: -0.065em;
+    font-size: clamp(2.3rem, 9.5vw, 3rem);
+    letter-spacing: normal;
     white-space: nowrap;
-    width: 125%;
-    transform: scaleX(0.8);
-    transform-origin: left center;
+    width: auto;
+    transform: none;
   }
 }
