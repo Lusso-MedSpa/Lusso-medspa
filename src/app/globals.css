@@ -266,3 +266,15 @@ main .rounded-full{border-radius:3px}
 @media(max-width:540px){.lusso-nav-book{display:none}.lusso-mobile-toggle{margin-left:auto}}
 @media(max-width:767px){.lusso-home .lusso-hero{padding:3.5rem 1.5rem;min-height:auto}.lusso-home .lusso-hero h1{font-size:clamp(3rem,15vw,4.6rem)}.lusso-home .lusso-hero-description{font-size:1rem}.lusso-home .lusso-hero-copy{padding:0}.lusso-home .lusso-hero a{width:100%;justify-content:center}.lusso-home .lusso-eyebrow{font-size:.75rem}.lusso-footer-grid{grid-template-columns:1fr}.lusso-footer-contact{grid-column:auto}.lusso-hero-artwork-frame{padding:1.25rem}}
 @media(pointer:coarse),(prefers-reduced-motion:reduce){.lusso-cursor-glow{display:none}}
+
+/* Keep the first hero line prominent on phones without wrapping. */
+@media (max-width: 767px) {
+  .lusso-home .lusso-hero h1 > span:first-child {
+    font-size: clamp(2.65rem, 11.5vw, 3.55rem);
+    letter-spacing: -0.065em;
+    white-space: nowrap;
+    width: 125%;
+    transform: scaleX(0.8);
+    transform-origin: left center;
+  }
+}
