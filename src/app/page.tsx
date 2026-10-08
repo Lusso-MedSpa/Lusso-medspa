@@ -23,7 +23,7 @@ export default function Home() {
         <main className="lusso-home">
             <section className="lusso-hero">
                 <div className="lusso-hero-copy">
-                    <h1>A little refinement.<br/><em>Entirely you.</em></h1>
+                    <h1><span className="block whitespace-nowrap text-[clamp(1.65rem,4.2vw,4.6rem)] sm:text-[clamp(2.2rem,4.2vw,4.6rem)]">A little refinement.</span><em className="block">Entirely you.</em></h1>
                     <p className="lusso-hero-description">Thoughtful aesthetic care, shaped around your features and your goals. Explore your options with a personal consultation in Roseville.</p>
                     <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center">
                         <CTAButton href="/treatments">Explore Treatments</CTAButton>
