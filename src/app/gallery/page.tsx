@@ -49,13 +49,13 @@ export default function GalleryPage() {
                                     <div className="absolute -top-12 -right-12 h-48 w-48 rounded-full bg-stone-200/70 blur-3xl" />
                                 </div>
 
-                                <div className="relative h-80 overflow-hidden bg-stone-200">
+                                <div className="relative h-80 overflow-hidden bg-[#eadfd5]">
                                     <Image
                                         src={item.image}
                                         alt={item.title}
                                         fill
                                         sizes="(max-width: 768px) 100vw, 33vw"
-                                        className="object-cover transition duration-700 group-hover:scale-110 group-hover:brightness-105"
+                                        className="object-contain"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent opacity-0 transition duration-500 group-hover:opacity-100" />
                                 </div>
