@@ -20,7 +20,7 @@ export default function GalleryPage() {
             />
 
             <section className="luxury-glow py-16">
-            <div className="mx-auto max-w-7xl px-6">
+            <div className="mx-auto max-w-6xl px-6">
                 <div className="mb-10 flex justify-center gap-3" role="tablist" aria-label="Gallery categories">
                     {(["Clinic", "Staff"] as const).map((item) => (
                         <button
@@ -35,9 +35,9 @@ export default function GalleryPage() {
                         </button>
                     ))}
                 </div>
-                <div className="columns-1 gap-6 sm:columns-2 lg:columns-3">
+                <div className="columns-1 gap-5 sm:columns-2 lg:columns-3 xl:columns-4">
                     {visibleImages.map((item, index) => (
-                        <div key={item.id} className="mb-6 break-inside-avoid">
+                        <div key={item.id} className="mb-5 break-inside-avoid">
                             <FadeIn delay={Math.min(index * 0.05, 0.2)}>
                                 <motion.figure
                                     whileHover={{ y: -5 }}
