@@ -35,39 +35,36 @@ export default function GalleryPage() {
                         </button>
                     ))}
                 </div>
-                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="columns-1 gap-6 sm:columns-2 lg:columns-3">
                     {visibleImages.map((item, index) => (
-                        <FadeIn key={item.id} delay={index * 0.05}>
-                            <motion.div
-                                whileHover={{ y: -8, scale: 1.015 }}
-                                transition={{ type: "spring", stiffness: 260, damping: 20 }}
-                                className="group relative overflow-hidden rounded-3xl border border-stone-200 bg-white shadow-sm"
-                            >
-                                <div className="pointer-events-none absolute inset-0 z-10 opacity-0 transition duration-500 group-hover:opacity-100">
-                                    <div className="absolute -bottom-12 -left-12 h-48 w-48 rounded-full bg-rose-200/40 blur-3xl" />
-                                    <div className="absolute -top-12 -right-12 h-48 w-48 rounded-full bg-stone-200/70 blur-3xl" />
-                                </div>
-
-                                <div className="relative bg-[#eadfd5]">
+                        <div key={item.id} className="mb-6 break-inside-avoid">
+                            <FadeIn delay={Math.min(index * 0.05, 0.2)}>
+                                <motion.figure
+                                    whileHover={{ y: -5 }}
+                                    transition={{ type: "spring", stiffness: 260, damping: 24 }}
+                                    className="group relative isolate overflow-hidden rounded-[1.5rem] bg-[#eadfd5] shadow-[0_14px_35px_rgba(67,46,37,0.15)]"
+                                >
                                     <img
                                         src={item.image}
                                         alt={item.title}
                                         className="block h-auto w-full"
+                                        loading="lazy"
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent opacity-0 transition duration-500 group-hover:opacity-100" />
-                                </div>
-
-                                <div className="relative z-20 p-5">
-                                    <p className="text-xs font-medium uppercase tracking-[0.25em] text-rose-500">
-                                        {item.category}
-                                    </p>
-
-                                    <h2 className="mt-2 font-serif text-xl font-semibold text-stone-900 transition group-hover:text-rose-500">
-                                        {item.title}
-                                    </h2>
-                                </div>
-                            </motion.div>
-                        </FadeIn>
+                                    <div
+                                        className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#211913]/85 via-[#211913]/35 to-transparent"
+                                        aria-hidden="true"
+                                    />
+                                    <figcaption className="absolute inset-x-0 bottom-0 p-6 text-white">
+                                        <p className="text-[10px] font-medium uppercase tracking-[0.3em] text-[#f0d9c8]">
+                                            {item.category}
+                                        </p>
+                                        <h2 className="mt-2 font-serif text-xl font-medium leading-snug drop-shadow-sm">
+                                            {item.title}
+                                        </h2>
+                                    </figcaption>
+                                </motion.figure>
+                            </FadeIn>
+                        </div>
                     ))}
                 </div>
             </div>
