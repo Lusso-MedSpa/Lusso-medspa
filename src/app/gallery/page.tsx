@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { galleryImages } from "@/data/gallery";
@@ -49,13 +48,11 @@ export default function GalleryPage() {
                                     <div className="absolute -top-12 -right-12 h-48 w-48 rounded-full bg-stone-200/70 blur-3xl" />
                                 </div>
 
-                                <div className="relative h-80 overflow-hidden bg-[#eadfd5]">
-                                    <Image
+                                <div className="relative bg-[#eadfd5]">
+                                    <img
                                         src={item.image}
                                         alt={item.title}
-                                        fill
-                                        sizes="(max-width: 768px) 100vw, 33vw"
-                                        className="object-contain"
+                                        className="block h-auto w-full"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent opacity-0 transition duration-500 group-hover:opacity-100" />
                                 </div>
