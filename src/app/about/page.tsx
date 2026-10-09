@@ -35,7 +35,7 @@ export default function AboutPage() {
                     </h2>
 
                     <p className="mt-5 leading-8 text-stone-600">
-                        MedSpa Masoud is built around a simple idea: aesthetic care should
+                        Lusso MedSpa is built around a simple idea: aesthetic care should
                         enhance your natural features, not change who you are. Every
                         treatment is planned with attention to your goals, comfort, and
                         individual needs.
