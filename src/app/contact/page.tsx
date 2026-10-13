@@ -46,7 +46,7 @@ export default function ContactPage() {
                             </p>
                             <p>
                                 <span className="font-medium text-stone-900">Hours:</span>{" "}
-                                Mon - Sunday, 9:00 - 19:00
+                                Mon - Sat, 9:00 - 19:00; Sunday: By appointment only
                             </p>
                             {siteConfig.googleReviewUrl ? <a
                                 href={siteConfig.googleReviewUrl}
