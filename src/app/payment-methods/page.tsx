@@ -58,7 +58,7 @@ export default function PaymentMethods() {
                         fontFamily: "Montserrat",
                         headerFontFamily: "Montserrat",
                         floatingEstimator: {
-                            position: "bottom-right",
+                            position: "bottom-middle",
                             offset: { x: "0px", y: "0px" },
                             zIndex: 9999,
                             ctaFontFamily: "Montserrat",
