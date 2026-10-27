@@ -49,7 +49,7 @@ export default function PaymentMethods() {
                         images: "",
                         customLogo: "https://lussomedicalspa.com/lusso-logo-dark.png",
                         defaultPurchaseAmount: 2000,
-                        customImage: "https://cdn.prod.website-files.com/681bf1d6f7dea459fe255c59/687bd2b371143cb734c99ece_Website-assets-1.png",
+                        customImage: "https://cdn.prod.website-files.com/681bf1d6f7dea459fe255c59/687bd2b39dd0ec3f0bb5ba1a_Website-assets-5.png",
                         imageCategory: "medspa",
                         language: "en"
                     },
@@ -68,7 +68,7 @@ export default function PaymentMethods() {
                             ctaTextColor: "#f4ece5"
                         }
                     }
-                }, ["hero", "calculator", "howitworks", "faq", "floatingEstimator"]);
+                }, ["howitworks", "calculator", "floatingEstimator"]);
             `}</Script>
 
             <section className="border-y border-[#c9b7a7]/35 bg-[#eadfd5] px-6 py-20 md:py-24">
