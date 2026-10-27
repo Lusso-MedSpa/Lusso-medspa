@@ -46,10 +46,10 @@ export default function PaymentMethods() {
                     variables: {
                         slug: "lusso-medspa",
                         name: "Lusso Medspa",
-                        images: [26],
+                        images: "",
                         customLogo: "https://lussomedicalspa.com/lusso-logo-dark.png",
                         defaultPurchaseAmount: 2000,
-                        customImage: "",
+                        customImage: "https://cdn.prod.website-files.com/681bf1d6f7dea459fe255c59/687bd2b371143cb734c99ece_Website-assets-1.png",
                         imageCategory: "medspa",
                         language: "en"
                     },
@@ -57,11 +57,11 @@ export default function PaymentMethods() {
                         primaryColor: "#765448",
                         secondaryColor: "#e8d6c8",
                         fontFamily: "Montserrat",
-                        headerFontFamily: "Playfair Display",
+                        headerFontFamily: "Montserrat",
                         floatingEstimator: {
                             position: "bottom-right",
-                            offset: { x: "16px", y: "20px" },
-                            zIndex: 100,
+                            offset: { x: "0px", y: "0px" },
+                            zIndex: 9999,
                             ctaFontFamily: "Montserrat",
                             bodyFontFamily: "Montserrat",
                             ctaColor: "#765448",
