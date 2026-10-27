@@ -25,7 +25,6 @@ export default function PaymentMethods() {
                         <div id="howitworks" />
                         <div id="faq" />
                     </div>
-                    <p className="mt-6 text-center text-xs leading-5 text-stone-600">Payment plans are subject to approval. Terms and availability vary.</p>
                 </div>
             </section>
             <div id="floatingEstimator" />
