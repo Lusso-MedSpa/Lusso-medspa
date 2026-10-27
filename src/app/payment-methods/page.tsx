@@ -1,4 +1,5 @@
 import FadeIn from "@/components/ui/FadeIn";
+import Script from "next/script";
 import { ArrowUpRight, Check } from "lucide-react";
 
 export default function PaymentMethods() {
@@ -11,6 +12,61 @@ export default function PaymentMethods() {
                     <p className="mx-auto mt-5 max-w-2xl leading-7 text-stone-600">Explore financing options available at Lusso MedSpa.</p>
                 </div>
             </section>
+
+            <section className="bg-[#e8d6c8] px-4 py-14 md:px-6 md:py-20">
+                <div className="mx-auto max-w-7xl">
+                    <div className="mb-8 text-center">
+                        <p className="text-sm font-medium uppercase tracking-[0.3em] text-[#9b6f63]">Cherry Financing</p>
+                        <h2 className="mt-3 font-serif text-3xl font-semibold text-[#302923] md:text-4xl">Explore flexible payment plans.</h2>
+                    </div>
+                    <div id="hero" />
+                    <div id="calculator" />
+                    <div id="howitworks" />
+                    <div id="faq" />
+                </div>
+            </section>
+            <Script id="lusso-cherry-widget" strategy="afterInteractive">{\`
+                (function (w, d, s, o, f, js, fjs) {
+                    w[o] = w[o] || function () {
+                        (w[o].q = w[o].q || []).push(arguments);
+                    };
+                    js = d.createElement(s);
+                    fjs = d.getElementsByTagName(s)[0];
+                    js.id = o;
+                    js.src = f;
+                    js.async = 1;
+                    fjs.parentNode.insertBefore(js, fjs);
+                })(window, document, "script", "_hw", "https://files.withcherry.com/widgets/widget.js");
+                _hw("init", {
+                    debug: false,
+                    variables: {
+                        slug: "lusso-medspa",
+                        name: "Lusso Medspa",
+                        images: [26],
+                        customLogo: "https://lussomedicalspa.com/lusso-logo-dark.png",
+                        defaultPurchaseAmount: 2000,
+                        customImage: "",
+                        imageCategory: "medspa",
+                        language: "en"
+                    },
+                    styles: {
+                        primaryColor: "#765448",
+                        secondaryColor: "#e8d6c8",
+                        fontFamily: "Montserrat",
+                        headerFontFamily: "Playfair Display",
+                        floatingEstimator: {
+                            position: "bottom-right",
+                            offset: { x: "0px", y: "0px" },
+                            zIndex: 9999,
+                            ctaFontFamily: "Montserrat",
+                            bodyFontFamily: "Montserrat",
+                            ctaColor: "#765448",
+                            ctaTextColor: "#f4ece5"
+                        }
+                    }
+                }, ["hero", "calculator", "howitworks", "faq", "floatingEstimator"]);
+            \`}</Script>
+            <div id="floatingEstimator" />
 
             <section className="border-y border-[#c9b7a7]/35 bg-[#eadfd5] px-6 py-20 md:py-24">
                 <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
