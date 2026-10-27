@@ -1,5 +1,4 @@
 import FadeIn from "@/components/ui/FadeIn";
-import Script from "next/script";
 import { ArrowUpRight, Check } from "lucide-react";
 
 export default function PaymentMethods() {
@@ -13,60 +12,23 @@ export default function PaymentMethods() {
                 </div>
             </section>
 
-            <section className="bg-[#e8d6c8] px-4 py-14 md:px-6 md:py-20">
-                <div className="mx-auto max-w-7xl">
-                    <div className="mb-8 text-center">
-                        <p className="text-sm font-medium uppercase tracking-[0.3em] text-[#9b6f63]">Cherry Financing</p>
-                        <h2 className="mt-3 font-serif text-3xl font-semibold text-[#302923] md:text-4xl">Explore flexible payment plans.</h2>
-                    </div>
-                    <div id="hero" />
-                    <div id="calculator" />
-                    <div id="howitworks" />
-                    <div id="faq" />
+            <section className="border-y border-[#c9b7a7]/35 bg-[#e8d6c8] px-6 py-20 md:py-24">
+                <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
+                    <FadeIn>
+                        <div className="overflow-hidden rounded-[2rem] border border-white/60 bg-[#f4ece5] p-5 shadow-[0_24px_70px_rgba(77,55,43,0.12)]">
+                            <img src="https://cdn.prod.website-files.com/68429dd85d8b8403741316c6/687bd28eb468a6c1bfde0dc1_Website-assets-1-768x576.webp" alt="Cherry payment plans" className="mx-auto h-auto w-full max-w-xl rounded-2xl object-contain" />
+                        </div>
+                    </FadeIn>
+                    <FadeIn delay={0.1}>
+                        <div>
+                            <p className="text-sm font-medium uppercase tracking-[0.3em] text-[#9b6f63]">Cherry Financing</p>
+                            <h2 className="mt-3 max-w-2xl font-serif text-3xl font-semibold leading-tight text-stone-900 md:text-4xl">Flexible payment plans with Cherry.</h2>
+                            <p className="mt-5 max-w-2xl leading-7 text-stone-700">Explore Cherry payment plans for your aesthetic treatments and see whether you qualify. Financing is subject to approval and terms vary.</p>
+                            <div className="mt-8"><a href="https://pay.withcherry.com/lusso-medspa?utm_source=merchant&amp;utm_medium=website" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full border border-[#765448] px-6 py-3 text-sm font-medium text-[#5f443b] transition hover:bg-[#765448] hover:text-white">Explore Cherry payment plans <ArrowUpRight className="h-4 w-4" aria-hidden="true" /></a></div>
+                        </div>
+                    </FadeIn>
                 </div>
             </section>
-            <Script id="lusso-cherry-widget" strategy="afterInteractive">{`
-                (function (w, d, s, o, f, js, fjs) {
-                    w[o] = w[o] || function () {
-                        (w[o].q = w[o].q || []).push(arguments);
-                    };
-                    js = d.createElement(s);
-                    fjs = d.getElementsByTagName(s)[0];
-                    js.id = o;
-                    js.src = f;
-                    js.async = 1;
-                    fjs.parentNode.insertBefore(js, fjs);
-                })(window, document, "script", "_hw", "https://files.withcherry.com/widgets/widget.js");
-                _hw("init", {
-                    debug: false,
-                    variables: {
-                        slug: "lusso-medspa",
-                        name: "Lusso Medspa",
-                        images: [26],
-                        customLogo: "https://lussomedicalspa.com/lusso-logo-dark.png",
-                        defaultPurchaseAmount: 2000,
-                        customImage: "",
-                        imageCategory: "medspa",
-                        language: "en"
-                    },
-                    styles: {
-                        primaryColor: "#765448",
-                        secondaryColor: "#e8d6c8",
-                        fontFamily: "Montserrat",
-                        headerFontFamily: "Playfair Display",
-                        floatingEstimator: {
-                            position: "bottom-right",
-                            offset: { x: "0px", y: "0px" },
-                            zIndex: 9999,
-                            ctaFontFamily: "Montserrat",
-                            bodyFontFamily: "Montserrat",
-                            ctaColor: "#765448",
-                            ctaTextColor: "#f4ece5"
-                        }
-                    }
-                }, ["hero", "calculator", "howitworks", "faq", "floatingEstimator"]);
-            `}</Script>
-            <div id="floatingEstimator" />
 
             <section className="border-y border-[#c9b7a7]/35 bg-[#eadfd5] px-6 py-20 md:py-24">
                 <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
