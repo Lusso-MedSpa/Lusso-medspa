@@ -25,7 +25,7 @@ export default function PaymentMethods() {
                     <div id="faq" />
                 </div>
             </section>
-            <Script id="lusso-cherry-widget" strategy="afterInteractive">{\`
+            <Script id="lusso-cherry-widget" strategy="afterInteractive">{`
                 (function (w, d, s, o, f, js, fjs) {
                     w[o] = w[o] || function () {
                         (w[o].q = w[o].q || []).push(arguments);
@@ -65,7 +65,7 @@ export default function PaymentMethods() {
                         }
                     }
                 }, ["hero", "calculator", "howitworks", "faq", "floatingEstimator"]);
-            \`}</Script>
+            `}</Script>
             <div id="floatingEstimator" />
 
             <section className="border-y border-[#c9b7a7]/35 bg-[#eadfd5] px-6 py-20 md:py-24">
