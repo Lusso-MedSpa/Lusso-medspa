@@ -144,9 +144,9 @@ export const treatments: Treatment[] = [
   },
   {
     "slug": "microneedling-prf",
-    "title": "Skin Pen",
+    "title": "Microneedling with PRF",
     "category": "PRP / PRF Treatments",
-    "description": "Reveal smoother, healthier-looking skin with SkinPen Microneedling. The collagen-stimulating treatment that helps improve skin texture, fine lines, acne scars, and overall skin appearance.",
+    "description": "A consultation-led approach to microneedling and platelet-rich fibrin. Your provider will explain the proposed method, aftercare and realistic expectations.",
     "image": "/treatments/skinpen.PNG",
     "imageFit": "contain",
     "benefits": [
