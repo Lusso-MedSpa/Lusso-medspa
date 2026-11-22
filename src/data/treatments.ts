@@ -24,6 +24,7 @@ export const treatments: Treatment[] = [
     "category": "Injectables & Regenerative Treatments",
     "description": "Smooth fine lines and wrinkles with Botox, a treatment that temporarily relaxes the targeted facial muscles to create a smoother, more refreshed, and youthful appearance.",
     "image": "/treatments/botox.PNG",
+    "imageFit": "contain",
     "benefits": [
       "Expression lines",
       "Individualized assessment"
@@ -35,6 +36,7 @@ export const treatments: Treatment[] = [
     "category": "Injectables & Regenerative Treatments",
     "description": "Achieve a naturally refreshed look with dysport, an injectable treatment designed to soften expression lines and wrinkles while maintaining your natural beauty.",
     "image": "/treatments/dysport.PNG",
+    "imageFit": "contain",
     "benefits": [
       "Expression lines",
       "Individualized assessment"
@@ -46,6 +48,7 @@ export const treatments: Treatment[] = [
     "category": "Injectables & Regenerative Treatments",
     "description": "Restore volume, enhance facial contours, and achieve a naturally rejuvenated appearance with dermal fillers. Perfect for enhancing facial features while maintaining beautiful, balanced results.",
     "image": "/treatments/lips+.PNG",
+    "imageFit": "contain",
     "benefits": [
       "Facial volume",
       "Balanced contours"
@@ -145,6 +148,7 @@ export const treatments: Treatment[] = [
     "category": "PRP / PRF Treatments",
     "description": "Reveal smoother, healthier-looking skin with SkinPen Microneedling. The collagen-stimulating treatment that helps improve skin texture, fine lines, acne scars, and overall skin appearance.",
     "image": "/treatments/skinpen.PNG",
+    "imageFit": "contain",
     "benefits": [
       "Skin texture",
       "Aftercare planning"
@@ -179,6 +183,7 @@ export const treatments: Treatment[] = [
     "description": "Motus PRO combines Alexandrite 755 nm and Nd:YAG 1064 nm wavelengths. Its Moveo HR mode uses repeated passes to gradually heat unwanted hair, while contact delivery supports a comfortable treatment experience across a range of skin tones. Individual sensitivity can vary.",
     "highlight": "This is pain free.",
     "image": "/treatments/motuspro.png",
+    "imageFit": "contain",
     "detailImage": "/treatments/motuspro.png",
     "detailImageFit": "cover",
     "benefits": [
@@ -203,6 +208,7 @@ export const treatments: Treatment[] = [
     "category": "Laser Treatments",
     "description": "Tetra PRO is a customizable CO₂ resurfacing platform. Fractional CO₂ settings may address texture, fine lines, sun damage, enlarged pores, and acne-scar concerns, while CoolPeel® offers superficial resurfacing designed to limit unnecessary thermal damage and minimize downtime. Treatment intensity and recovery vary.",
     "image": "/treatments/co2laser.png",
+    "imageFit": "contain",
     "benefits": [
       "Skin texture",
       "Acne-scar concerns"
