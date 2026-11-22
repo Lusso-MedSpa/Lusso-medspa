@@ -20,10 +20,21 @@ export const treatmentCategories = [
 export const treatments: Treatment[] = [
   {
     "slug": "botox-treatment",
-    "title": "Botox® / Dysport®",
+    "title": "Botox",
     "category": "Injectables & Regenerative Treatments",
-    "description": "Prescription injectables that temporarily soften expression lines by relaxing selected facial muscles. Your clinician will assess suitability and discuss risks and expected results.",
-    "image": "/treatments/botox-vial.webp",
+    "description": "Smooth fine lines and wrinkles with Botox, a treatment that temporarily relaxes the targeted facial muscles to create a smoother, more refreshed, and youthful appearance.",
+    "image": "/treatments/botox.PNG",
+    "benefits": [
+      "Expression lines",
+      "Individualized assessment"
+    ]
+  },
+  {
+    "slug": "dysport-treatment",
+    "title": "Dysport",
+    "category": "Injectables & Regenerative Treatments",
+    "description": "Achieve a naturally refreshed look with dysport, an injectable treatment designed to soften expression lines and wrinkles while maintaining your natural beauty.",
+    "image": "/treatments/dysport.PNG",
     "benefits": [
       "Expression lines",
       "Individualized assessment"
@@ -31,10 +42,10 @@ export const treatments: Treatment[] = [
   },
   {
     "slug": "dermal-fillers",
-    "title": "Dermal Fillers (Hyaluronic Acid)",
+    "title": "Dermal Filler",
     "category": "Injectables & Regenerative Treatments",
-    "description": "Hyaluronic acid fillers can restore volume and enhance facial contours. Product selection and placement are tailored to your anatomy and goals.",
-    "image": "/treatments/filler.webp",
+    "description": "Restore volume, enhance facial contours, and achieve a naturally rejuvenated appearance with dermal fillers. Perfect for enhancing facial features while maintaining beautiful, balanced results.",
+    "image": "/treatments/lips+.PNG",
     "benefits": [
       "Facial volume",
       "Balanced contours"
@@ -130,10 +141,10 @@ export const treatments: Treatment[] = [
   },
   {
     "slug": "microneedling-prf",
-    "title": "Microneedling with PRF",
+    "title": "Skin Pen",
     "category": "PRP / PRF Treatments",
-    "description": "A consultation-led approach to microneedling and platelet-rich fibrin. Your provider will explain the proposed method, aftercare and realistic expectations.",
-    "image": "/treatments/microneedling-prf.webp",
+    "description": "Reveal smoother, healthier-looking skin with SkinPen Microneedling. The collagen-stimulating treatment that helps improve skin texture, fine lines, acne scars, and overall skin appearance.",
+    "image": "/treatments/skinpen.PNG",
     "benefits": [
       "Skin texture",
       "Aftercare planning"
@@ -162,25 +173,14 @@ export const treatments: Treatment[] = [
     ]
   },
   {
-    "slug": "pdo-thread-lift",
-    "title": "PDO Thread Lift",
-    "category": "Skin Rejuvenation",
-    "description": "A minimally invasive option for selected facial laxity concerns. A clinician will discuss suitability, potential complications and realistic lifting expectations.",
-    "image": "/treatments/pdo-thread-lift.webp",
-    "benefits": [
-      "Facial laxity",
-      "Treatment consultation"
-    ]
-  },
-  {
     "slug": "laser-hair-removal",
     "title": "Laser Hair Removal — Motus PRO",
     "category": "Laser Treatments",
     "description": "Motus PRO combines Alexandrite 755 nm and Nd:YAG 1064 nm wavelengths. Its Moveo HR mode uses repeated passes to gradually heat unwanted hair, while contact delivery supports a comfortable treatment experience across a range of skin tones. Individual sensitivity can vary.",
     "highlight": "This is pain free.",
-    "image": "/treatments/motuspro.jpeg",
-    "detailImage": "/treatments/motus.jpeg",
-    "detailImageFit": "contain",
+    "image": "/treatments/motuspro.png",
+    "detailImage": "/treatments/motuspro.png",
+    "detailImageFit": "cover",
     "benefits": [
       "Unwanted hair",
       "Personalized laser assessment"
@@ -202,7 +202,7 @@ export const treatments: Treatment[] = [
     "title": "CO₂ Fractional Laser / CoolPeel® — Tetra PRO",
     "category": "Laser Treatments",
     "description": "Tetra PRO is a customizable CO₂ resurfacing platform. Fractional CO₂ settings may address texture, fine lines, sun damage, enlarged pores, and acne-scar concerns, while CoolPeel® offers superficial resurfacing designed to limit unnecessary thermal damage and minimize downtime. Treatment intensity and recovery vary.",
-    "image": "/treatments/co2-laser.webp",
+    "image": "/treatments/co2laser.png",
     "benefits": [
       "Skin texture",
       "Acne-scar concerns"
