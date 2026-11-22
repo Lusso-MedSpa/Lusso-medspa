@@ -24,12 +24,22 @@ export default function TreatmentCard({ treatment }: Props) {
             </div>
 
             <div className="relative h-64 overflow-hidden bg-stone-200">
+                {treatment.imageFit === "contain" && (
+                    <Image
+                        src={treatment.image}
+                        alt=""
+                        aria-hidden="true"
+                        fill
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                        className="object-cover scale-110 blur-xl brightness-90"
+                    />
+                )}
                 <Image
                     src={treatment.image}
                     alt={treatment.title}
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"
-                    className={`${treatment.imageFit === "contain" ? "object-contain" : "object-cover"} transition duration-700 group-hover:scale-105 group-hover:brightness-105`}
+                    className={`${treatment.imageFit === "contain" ? "object-contain scale-[1.28] group-hover:scale-[1.34]" : "object-cover group-hover:scale-105"} transition-transform duration-700 group-hover:brightness-105`}
                 />
                 <div
                     className="absolute inset-0 bg-gradient-to-t from-black/35 via-black/5 to-transparent opacity-0 group-hover:opacity-100"/>
